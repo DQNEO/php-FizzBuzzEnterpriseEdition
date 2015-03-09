@@ -1,3 +1,6 @@
 #!/usr/bin/env php
 <?php
-echo "FizzBuzz\n";
+
+foreach (range(1,30) as $n) {
+    echo "$n\n";
+}
