@@ -1,4 +1,6 @@
 <?php
+namespace Acme;
+
 class FizzBuzz
 {
     function main($max)

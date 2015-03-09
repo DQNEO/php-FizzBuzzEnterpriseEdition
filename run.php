@@ -2,4 +2,4 @@
 <?php
 require_once __DIR__ . '/Acme/FizzBuzz.php';
 
-FizzBuzz::main($argv[1]);
+\Acme\FizzBuzz::main($argv[1]);
