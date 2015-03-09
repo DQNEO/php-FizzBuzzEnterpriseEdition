@@ -4,4 +4,4 @@ require_once __DIR__ . '/Acme/FizzBuzz.php';
 use Acme\FizzBuzz;
 
 $fizzbuzz = new FizzBuzz();
-$fizzbuzz->main($argv[1]);
+$fizzbuzz->run($argv[1]);
