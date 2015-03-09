@@ -13,7 +13,7 @@ class FizzBuzz
             } else if ($n % 5 === 0) {
                 echo "Buzz";
             } else {
-                echo "$n";
+                echo $n;
             }
 
             echo "\n";
