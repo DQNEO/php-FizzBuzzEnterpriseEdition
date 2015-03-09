@@ -3,11 +3,17 @@ namespace Acme;
 
 class FizzBuzz
 {
-    private $start = 1;
+    private $start;
 
-    private $firstDevisor = 3;
-    private $secondDevisor = 5;
+    private $firstDevisor;
+    private $secondDevisor;
 
+    public function __construct($start, $firstDevisor, $secondDevisor)
+    {
+        $this->start = $start;
+        $this->firstDevisor = $firstDevisor;
+        $this->secondDevisor = $secondDevisor;
+    }
 
     public function run($max)
     {
