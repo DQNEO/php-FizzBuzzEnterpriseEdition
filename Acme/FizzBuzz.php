@@ -7,12 +7,15 @@ class FizzBuzz
 
     public function run($max)
     {
+        $firstDevisor = 3;
+        $secondDevisor = 5;
+
         foreach (range($this->start, $max) as $n) {
-            if ($n % 3 === 0 && $n % 5 === 0) {
+            if ($n % $firstDevisor === 0 && $n % $secondDevisor === 0) {
                 $this->output("FizzBuzz");
-            } else if ($n % 3 === 0) {
+            } else if ($n % $firstDevisor === 0) {
                 $this->output("Fizz");
-            } else if ($n % 5 === 0) {
+            } else if ($n % $secondDevisor === 0) {
                 $this->output("Buzz");
             } else {
                 $this->output($n);
