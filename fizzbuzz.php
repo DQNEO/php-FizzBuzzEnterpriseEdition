@@ -1,7 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-foreach (range(1,30) as $n) {
+$max = 30;
+foreach (range(1,$max) as $n) {
     if ($n % 3 === 0 && $n % 5 === 0) {
         echo "FizzBuzz\n";
     } else if ($n % 3 === 0) {
