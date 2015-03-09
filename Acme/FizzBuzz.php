@@ -7,16 +7,21 @@ class FizzBuzz
     {
         foreach (range(1,$max) as $n) {
             if ($n % 3 === 0 && $n % 5 === 0) {
-                echo "FizzBuzz";
+                self::output("FizzBuzz");
             } else if ($n % 3 === 0) {
-                echo "Fizz";
+                self::output("Fizz");
             } else if ($n % 5 === 0) {
-                echo "Buzz";
+                self::output("Buzz");
             } else {
-                echo $n;
+                self::output($n);
             }
 
-            echo "\n";
+            self::output("\n");
         }
+    }
+
+    function output($string)
+    {
+        echo $string;
     }
 }
