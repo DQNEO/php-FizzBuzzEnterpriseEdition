@@ -2,7 +2,7 @@
 <?php
 
 foreach (range(1,30) as $n) {
-    if ($n % 15 === 0) {
+    if ($n % 3 === 0 && $n % 5 === 0) {
         echo "FizzBuzz\n";
     } else if ($n % 3 === 0) {
         echo "Fizz\n";
@@ -11,4 +11,5 @@ foreach (range(1,30) as $n) {
     } else {
         echo "$n\n";
     }
+
 }
