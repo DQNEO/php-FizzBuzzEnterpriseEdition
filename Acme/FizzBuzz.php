@@ -3,9 +3,11 @@ namespace Acme;
 
 class FizzBuzz
 {
+    private $start = 1;
+
     public function run($max)
     {
-        foreach (range(1,$max) as $n) {
+        foreach (range($this->start, $max) as $n) {
             if ($n % 3 === 0 && $n % 5 === 0) {
                 $this->output("FizzBuzz");
             } else if ($n % 3 === 0) {
