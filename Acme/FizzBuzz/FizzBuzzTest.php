@@ -1,7 +1,8 @@
 <?php
 use Acme\FizzBuzz\FizzBuzz;
+use Acme\FizzBuzz\WriterInterface;
 
-class MockWriter
+class MockWriter implements WriterInterface
 {
     public $buf = "";
 

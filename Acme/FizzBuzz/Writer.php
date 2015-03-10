@@ -1,6 +1,6 @@
 <?php
 namespace Acme\FizzBuzz;
-class Writer
+class Writer implements WriterInterface
 {
     public function write($string)
     {
