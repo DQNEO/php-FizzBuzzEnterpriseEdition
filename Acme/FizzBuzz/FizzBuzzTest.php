@@ -1,7 +1,7 @@
 <?php
-use Acme\FizzBuzz;
+use Acme\FizzBuzz\FizzBuzz;
 
-class Writer
+class MockWriter
 {
     public $buf = "";
 
@@ -15,14 +15,14 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     public function testNew()
     {
-        $writer = new Writer;
+        $writer = new MockWriter;
         $fb = new FizzBuzz(1,1,1, $writer);
-        $this->assertInstanceOf("Acme\\FizzBuzz", $fb);
+        $this->assertInstanceOf("Acme\\FizzBuzz\\FizzBuzz", $fb);
     }
 
     public function testRun1()
     {
-        $writer = new Writer;
+        $writer = new MockWriter;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(1);
         $this->assertEquals("1\n", $writer->buf);
@@ -30,7 +30,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 
     public function testRun2()
     {
-        $writer = new Writer;
+        $writer = new MockWriter;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(2);
         $this->assertEquals("1\n2\n", $writer->buf);
@@ -38,7 +38,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 
     public function testRun3()
     {
-        $writer = new Writer;
+        $writer = new MockWriter;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(3);
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
@@ -47,7 +47,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 
     public function testRun16()
     {
-        $writer = new Writer;
+        $writer = new MockWriter;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(16);
 

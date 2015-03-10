@@ -1,5 +1,5 @@
 <?php
-namespace Acme;
+namespace Acme\FizzBuzz;
 class Writer
 {
     public function write($string)
