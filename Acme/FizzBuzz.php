@@ -16,6 +16,7 @@ class FizzBuzz
         $this->firstDevisor = $firstDevisor;
         $this->secondDevisor = $secondDevisor;
         $this->buf = "";
+        $this->writer = new Writer();
     }
 
     public function run($max)
@@ -37,7 +38,15 @@ class FizzBuzz
 
     public function output($string)
     {
-        echo $string;
+        $this->writer->write($string);
         $this->buf .= $string;
+    }
+}
+
+class Writer
+{
+    public function write($string)
+    {
+        echo $string;
     }
 }
