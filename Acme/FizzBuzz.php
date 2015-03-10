@@ -42,11 +42,3 @@ class FizzBuzz
         $this->buf .= $string;
     }
 }
-
-class Writer
-{
-    public function write($string)
-    {
-        echo $string;
-    }
-}
