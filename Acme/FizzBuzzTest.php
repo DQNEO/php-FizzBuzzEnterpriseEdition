@@ -31,4 +31,30 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("1\n2\nFizz\n", $fb->buf);
     }
 
+
+    public function testRun16()
+    {
+        $fb = new FizzBuzz(1,3,5);
+        $fb->run(16);
+
+        $expected ="1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+";
+        $this->assertEquals($expected, $fb->buf);
+    }
+
 }
