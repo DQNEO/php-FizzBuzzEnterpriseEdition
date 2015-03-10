@@ -1,5 +1,6 @@
 <?php
 namespace Acme\FizzBuzz;
+use Acme\FizzBuzz\WriterInterface;
 
 class FizzBuzz
 {
@@ -8,7 +9,10 @@ class FizzBuzz
     private $firstDevisor;
     private $secondDevisor;
 
-    public function __construct($start, $firstDevisor, $secondDevisor, $writer)
+    /** @var WiterInterface */
+    private $writer;
+
+    public function __construct($start, $firstDevisor, $secondDevisor, WriterInterface $writer)
     {
         $this->start = $start;
         $this->firstDevisor = $firstDevisor;
