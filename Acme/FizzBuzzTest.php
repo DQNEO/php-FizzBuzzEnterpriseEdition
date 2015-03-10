@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/FizzBuzz.php';
-require_once __DIR__ . '/Writer.php';
 use Acme\FizzBuzz;
 
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
