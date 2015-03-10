@@ -1,7 +1,16 @@
 <?php
 use Acme\FizzBuzz;
-use Acme\Writer;
 
+class Writer
+{
+    public $buf = "";
+
+    public function write($string)
+    {
+        $this->buf .= $string;
+    }
+
+}
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     public function testNew()
