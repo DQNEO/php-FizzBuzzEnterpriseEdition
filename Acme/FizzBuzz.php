@@ -10,13 +10,13 @@ class FizzBuzz
 
     public $buf;
 
-    public function __construct($start, $firstDevisor, $secondDevisor)
+    public function __construct($start, $firstDevisor, $secondDevisor, $writer)
     {
         $this->start = $start;
         $this->firstDevisor = $firstDevisor;
         $this->secondDevisor = $secondDevisor;
         $this->buf = "";
-        $this->writer = new Writer();
+        $this->writer = $writer;
     }
 
     public function run($max)
