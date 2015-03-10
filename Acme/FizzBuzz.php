@@ -8,14 +8,11 @@ class FizzBuzz
     private $firstDevisor;
     private $secondDevisor;
 
-    public $buf;
-
     public function __construct($start, $firstDevisor, $secondDevisor, $writer)
     {
         $this->start = $start;
         $this->firstDevisor = $firstDevisor;
         $this->secondDevisor = $secondDevisor;
-        $this->buf = "";
         $this->writer = $writer;
     }
 
@@ -39,6 +36,5 @@ class FizzBuzz
     public function output($string)
     {
         $this->writer->write($string);
-        $this->buf .= $string;
     }
 }

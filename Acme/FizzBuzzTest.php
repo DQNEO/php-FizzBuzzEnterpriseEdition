@@ -16,7 +16,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new Writer;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(1);
-        $this->assertEquals("1\n", $fb->buf);
+        $this->assertEquals("1\n", $writer->buf);
     }
 
     public function testRun2()
@@ -24,7 +24,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new Writer;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(2);
-        $this->assertEquals("1\n2\n", $fb->buf);
+        $this->assertEquals("1\n2\n", $writer->buf);
     }
 
     public function testRun3()
@@ -32,7 +32,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new Writer;
         $fb = new FizzBuzz(1,3,5, $writer);
         $fb->run(3);
-        $this->assertEquals("1\n2\nFizz\n", $fb->buf);
+        $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
 
@@ -59,7 +59,7 @@ Fizz
 FizzBuzz
 16
 ";
-        $this->assertEquals($expected, $fb->buf);
+        $this->assertEquals($expected, $writer->buf);
     }
 
 }
