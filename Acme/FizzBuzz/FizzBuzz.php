@@ -51,9 +51,9 @@ class FizzBuzz
     {
         if ($this->isDevisable($n, $this->firstDevisor * $this->secondDevisor)) {
             $entity = new FizzBuzzEntity;
-        } else if ($n % $this->firstDevisor === 0) {
+        } else if ($this->isDevisable($n, $this->firstDevisor)) {
             $entity = new Fizz;
-        } else if ($n % $this->secondDevisor === 0) {
+        } else if ($this->isDevisable($n, $this->secondDevisor)) {
             $entity = new Buzz;
         } else {
             $entity = new Number($n);
