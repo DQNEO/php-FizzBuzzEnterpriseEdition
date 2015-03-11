@@ -5,23 +5,7 @@ use Acme\FizzBuzz\Entity\Fizz;
 use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
 use Acme\FizzBuzz\Entity\Number;
-
-class RangeIterator
-{
-    private $star;
-    private $end;
-
-    public function __construct($start, $end)
-    {
-        $this->start = $start;
-        $this->end = $end;
-    }
-
-    public function toArray()
-    {
-        return range($this->start, $this->end);
-    }
-}
+use Acme\FizzBuzz\RangeIterator;
 
 class FizzBuzz
 {
