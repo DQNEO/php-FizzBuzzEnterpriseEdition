@@ -36,11 +36,11 @@ class FizzBuzz
     /**
      * @param  int $start
      * @param  int $end
-     * @return array
+     * @return \Iterator
      */
     private function getRange($start, $end)
     {
-        return (new RangeIterator($start, $end))->toArray();
+        return new RangeIterator($start, $end);
     }
 
     /**
