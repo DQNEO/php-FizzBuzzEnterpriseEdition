@@ -1,6 +1,7 @@
 <?php
 namespace Acme\FizzBuzz;
 use Acme\FizzBuzz\WriterInterface;
+use Acme\FizzBuzz\Entity;
 
 class Entity
 {
