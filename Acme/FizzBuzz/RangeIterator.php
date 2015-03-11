@@ -7,16 +7,16 @@ class RangeIterator implements \Iterator
     private $end;
     private $current;
 
-    public function __construct($start, $end)
+    public function __construct(Integer $start, Integer $end)
     {
         $this->start = $start;
         $this->end = $end;
-        $this->current = $this->start;
+        $this->current = $this->start->getValue();
     }
 
     public function rewind()
     {
-        $this->current = $this->start;
+        $this->current = $this->start->getValue();
     }
 
     public function next()
@@ -31,12 +31,12 @@ class RangeIterator implements \Iterator
 
     public function current()
     {
-        return $this->current;
+        return new Integer($this->current);
     }
 
     public function valid()
     {
-        return $this->current <= $this->end;
+        return $this->current <= $this->end->getValue();
     }
 
 }

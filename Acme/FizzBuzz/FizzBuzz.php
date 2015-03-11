@@ -41,7 +41,7 @@ class FizzBuzz
      */
     private function getRangeIterator($start, $end)
     {
-        return new RangeIterator($start->getValue(), $end->getValue());
+        return new RangeIterator($start, $end);
     }
 
     /**
