@@ -3,8 +3,8 @@ namespace Acme\FizzBuzz;
 
 class Divident extends Integer
 {
-    public function isDividableBy($divisor)
+    public function isDividableBy(Integer $divisor)
     {
-        return ($this->value % $divisor === 0);
+        return ($this->value % $divisor->getValue() === 0);
     }
 }
