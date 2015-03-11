@@ -1,6 +1,7 @@
 #!/bin/bash
-
-diff <(php run.php 30) result30.txt
+cd $(dirname $0)
+cd ..
+diff <(php ./bin/run.php 30) ./test/result30.txt
 if [ $? -eq 0 ]; then
     echo ok
 else
@@ -8,7 +9,7 @@ else
     exit 1
 fi
 
-diff <(php run.php 100) result100.txt
+diff <(php ./bin/run.php 100) ./test/result100.txt
 if [ $? -eq 0 ]; then
     echo ok
 else

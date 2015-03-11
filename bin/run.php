@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-require_once __DIR__ . '/autoload.php';
+require_once __DIR__ . '/../autoload.php';
 use Acme\FizzBuzz\FizzBuzzRunner;
 use Acme\FizzBuzz\Writer;
 
