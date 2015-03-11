@@ -31,8 +31,7 @@ class FizzBuzz
     public function run($max)
     {
         foreach ($this->getRangeIterator($this->start, new Integer($max)) as $n) {
-            $divident = new Divident($n);
-            $entity = $this->getEntity($divident);
+            $entity = $this->getEntity(new Divident($n));
             $this->output($entity);
         }
     }
