@@ -28,18 +28,28 @@ class FizzBuzz
     public function run($max)
     {
         foreach (range($this->start, $max) as $n) {
-            if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
-                $entity = new FizzBuzzEntity;
-            } else if ($n % $this->firstDevisor === 0) {
-                $entity = new Fizz;
-            } else if ($n % $this->secondDevisor === 0) {
-                $entity = new Buzz;
-            } else {
-                $entity = new Number($n);
-            }
-
+            $entity = $this->getEntity($n);
             $this->output($entity);
         }
+    }
+
+    /**
+     * @param  int $n
+     * @return AbstractEntity $entity
+     */
+    private function getEntity($n)
+    {
+        if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
+            $entity = new FizzBuzzEntity;
+        } else if ($n % $this->firstDevisor === 0) {
+            $entity = new Fizz;
+        } else if ($n % $this->secondDevisor === 0) {
+            $entity = new Buzz;
+        } else {
+            $entity = new Number($n);
+        }
+
+        return $entity;
     }
 
     public function output($entity)
