@@ -39,7 +39,7 @@ class FizzBuzz
      * @param  int $end
      * @return \Iterator
      */
-    private function getRangeIterator($start, $end)
+    private function getRangeIterator(Integer $start, Integer $end)
     {
         return new RangeIterator($start, $end);
     }
