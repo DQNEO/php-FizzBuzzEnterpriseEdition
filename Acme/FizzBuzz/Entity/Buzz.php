@@ -1,18 +1,8 @@
 <?php
 namespace Acme\FizzBuzz\Entity;
 
-class Buzz
+class Buzz extends Entity
 {
-    private $value;
-
-    public function __construct($value)
-    {
-        $this->value = $value;
-    }
-
-    public function getValue()
-    {
-        return $this->value;
-    }
+    protected $value = "Buzz";
 }
 

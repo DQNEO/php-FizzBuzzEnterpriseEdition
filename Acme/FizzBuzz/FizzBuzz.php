@@ -29,11 +29,11 @@ class FizzBuzz
     {
         foreach (range($this->start, $max) as $n) {
             if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
-                $entity = new FizzBuzzEntity("FizzBuzz");
+                $entity = new FizzBuzzEntity;
             } else if ($n % $this->firstDevisor === 0) {
-                $entity = new Fizz("Fizz");
+                $entity = new Fizz;
             } else if ($n % $this->secondDevisor === 0) {
-                $entity = new Buzz("Buzz");
+                $entity = new Buzz;
             } else {
                 $entity = new Number($n);
             }

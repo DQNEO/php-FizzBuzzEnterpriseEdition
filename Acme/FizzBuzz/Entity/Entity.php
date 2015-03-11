@@ -3,11 +3,13 @@ namespace Acme\FizzBuzz\Entity;
 
 class Entity
 {
-    private $value;
+    protected $value;
 
-    public function __construct($value)
+    public function __construct($value = null)
     {
-        $this->value = $value;
+        if (isset($value)) {
+            $this->value = $value;
+        }
     }
 
     public function getValue()
