@@ -3,20 +3,20 @@ namespace Acme\FizzBuzz;
 
 class Divident
 {
-    private $divident;
+    private $value;
 
-    public function __construct($divident)
+    public function __construct($value)
     {
-        $this->divident = $divident;
+        $this->value = $value;
     }
 
     public function isDividableBy($divisor)
     {
-        return ($this->divident % $divisor === 0);
+        return ($this->value % $divisor === 0);
     }
 
     public function getValue()
     {
-        return $this->divident;
+        return $this->value;
     }
 }
