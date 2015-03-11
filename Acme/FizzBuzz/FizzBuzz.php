@@ -45,7 +45,7 @@ class FizzBuzz
 
     /**
      * @param  int $n
-     * @return AbstractEntity $entity
+     * @return AbstractEntity
      */
     private function getEntity($n)
     {
