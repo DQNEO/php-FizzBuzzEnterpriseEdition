@@ -37,8 +37,8 @@ class FizzBuzz
     }
 
     /**
-     * @param  int $start
-     * @param  int $end
+     * @param  Integer $start
+     * @param  Integer $end
      * @return \Iterator
      */
     private function getRangeIterator(Integer $start, Integer $end)
@@ -47,7 +47,7 @@ class FizzBuzz
     }
 
     /**
-     * @param  int $n
+     * @param  Divident $divident
      * @return AbstractEntity
      */
     private function getEntity(Divident $divident)
@@ -65,6 +65,10 @@ class FizzBuzz
         return $entity;
     }
 
+    /**
+     * @param  AbstractEntity $entity
+     * @return void
+     */
     public function output(AbstractEntity $entity)
     {
         $this->writer->write($entity->getValue() . "\n");
