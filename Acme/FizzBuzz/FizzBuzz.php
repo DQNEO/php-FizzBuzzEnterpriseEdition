@@ -6,6 +6,8 @@ use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
 use Acme\FizzBuzz\Entity\Number;
 use Acme\FizzBuzz\RangeIterator;
+use Acme\FizzBuzz\DataType\Integer;
+use Acme\FizzBuzz\DataType\Divident;
 
 class FizzBuzz
 {

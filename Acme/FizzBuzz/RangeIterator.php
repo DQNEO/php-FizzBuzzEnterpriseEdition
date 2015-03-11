@@ -1,6 +1,8 @@
 <?php
 namespace Acme\FizzBuzz;
 
+use Acme\FizzBuzz\DataType\Integer;
+
 class RangeIterator implements \Iterator
 {
     private $start;
