@@ -1,7 +1,7 @@
 <?php
 namespace Acme\FizzBuzz;
 use Acme\FizzBuzz\WriterInterface;
-use Acme\FizzBuzz\Entity\Entity;
+use Acme\FizzBuzz\Entity\AbstractEntity;
 use Acme\FizzBuzz\Entity\Fizz;
 use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;

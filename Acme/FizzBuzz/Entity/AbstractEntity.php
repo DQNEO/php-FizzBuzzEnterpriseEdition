@@ -1,7 +1,7 @@
 <?php
 namespace Acme\FizzBuzz\Entity;
 
-class Entity
+abstract class AbstractEntity
 {
     protected $value;
 
