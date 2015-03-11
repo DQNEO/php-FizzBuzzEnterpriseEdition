@@ -10,6 +10,11 @@ class Entity
     {
         $this->value = $value;
     }
+
+    public function getValue()
+    {
+        return $this->value;
+    }
 }
 
 class FizzBuzz
@@ -49,6 +54,7 @@ class FizzBuzz
 
     public function output($string)
     {
-        $this->writer->write($string);
+        $entity = new Entity($string);
+        $this->writer->write($entity->getValue());
     }
 }
