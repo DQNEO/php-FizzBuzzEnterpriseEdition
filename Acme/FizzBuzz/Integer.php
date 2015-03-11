@@ -3,7 +3,7 @@ namespace Acme\FizzBuzz;
 
 class Integer
 {
-    private $value;
+    protected $value;
 
     public function __construct($value)
     {
