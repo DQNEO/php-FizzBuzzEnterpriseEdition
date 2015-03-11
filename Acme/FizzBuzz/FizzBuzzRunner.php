@@ -10,7 +10,7 @@ use Acme\FizzBuzz\RangeIterator;
 use Acme\FizzBuzz\DataType\Integer;
 use Acme\FizzBuzz\DataType\Divident;
 
-class FizzBuzz
+class FizzBuzzRunner
 {
     private $start;
 
