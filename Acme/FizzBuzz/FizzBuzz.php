@@ -49,7 +49,7 @@ class FizzBuzz
      */
     private function getEntity($n)
     {
-        if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
+        if ($this->isDevisable($n, $this->firstDevisor * $this->secondDevisor)) {
             $entity = new FizzBuzzEntity;
         } else if ($n % $this->firstDevisor === 0) {
             $entity = new Fizz;
@@ -60,6 +60,11 @@ class FizzBuzz
         }
 
         return $entity;
+    }
+
+    private function isDevisable($target, $devisor)
+    {
+        return ($target % $devisor === 0);
     }
 
     public function output($entity)
