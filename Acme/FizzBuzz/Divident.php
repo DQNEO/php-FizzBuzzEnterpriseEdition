@@ -15,4 +15,8 @@ class Divident
         return ($this->divident % $divisor === 0);
     }
 
+    public function getValue()
+    {
+        return $this->divident;
+    }
 }

@@ -28,7 +28,8 @@ class FizzBuzz
     public function run($max)
     {
         foreach ($this->getRangeIterator($this->start, $max) as $n) {
-            $entity = $this->getEntity($n);
+            $dividentObject = new Divident($n);
+            $entity = $this->getEntity($dividentObject);
             $this->output($entity);
         }
     }
@@ -47,9 +48,8 @@ class FizzBuzz
      * @param  int $n
      * @return AbstractEntity
      */
-    private function getEntity($n)
+    private function getEntity(Divident $dividentObject)
     {
-        $dividentObject = new Divident($n);
         if ($dividentObject->isDividableBy($this->firstDivisor * $this->secondDivisor)) {
             $entity = new FizzBuzzEntity;
         } else if ($dividentObject->isDividableBy($this->firstDivisor)) {
@@ -57,7 +57,7 @@ class FizzBuzz
         } else if ($dividentObject->isDividableBy($this->secondDivisor)) {
             $entity = new Buzz;
         } else {
-            $entity = new Number($n);
+            $entity = new Number($dividentObject->getValue());
         }
 
         return $entity;
