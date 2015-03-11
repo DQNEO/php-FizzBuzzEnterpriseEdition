@@ -39,22 +39,21 @@ class FizzBuzz
     {
         foreach (range($this->start, $max) as $n) {
             if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
-                $this->output("FizzBuzz");
+                $entity = new Entity("FizzBuzz");
             } else if ($n % $this->firstDevisor === 0) {
-                $this->output("Fizz");
+                $entity = new Entity("Fizz");
             } else if ($n % $this->secondDevisor === 0) {
-                $this->output("Buzz");
+                $entity = new Entity("Buzz");
             } else {
-                $this->output($n);
+                $entity = new Entity($n);
             }
 
-            $this->output("\n");
+            $this->output($entity);
         }
     }
 
-    public function output($string)
+    public function output($entity)
     {
-        $entity = new Entity($string);
-        $this->writer->write($entity->getValue());
+        $this->writer->write($entity->getValue() . "\n");
     }
 }
