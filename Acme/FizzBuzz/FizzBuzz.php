@@ -2,6 +2,16 @@
 namespace Acme\FizzBuzz;
 use Acme\FizzBuzz\WriterInterface;
 
+class Entity
+{
+    private $value;
+
+    public function __construct($value)
+    {
+        $this->value = $value;
+    }
+}
+
 class FizzBuzz
 {
     private $start;
