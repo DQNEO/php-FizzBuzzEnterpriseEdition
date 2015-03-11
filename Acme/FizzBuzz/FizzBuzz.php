@@ -52,7 +52,7 @@ class FizzBuzz
         }
     }
 
-    public function output($entity)
+    public function output(Entity $entity)
     {
         $this->writer->write($entity->getValue() . "\n");
     }
