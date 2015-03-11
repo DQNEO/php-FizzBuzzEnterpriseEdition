@@ -26,10 +26,15 @@ class FizzBuzz
 
     public function run($max)
     {
-        foreach (range($this->start, $max) as $n) {
+        foreach ($this->getRange($this->start, $max) as $n) {
             $entity = $this->getEntity($n);
             $this->output($entity);
         }
+    }
+
+    private function getRange($start, $end)
+    {
+        return range($start, $end);
     }
 
     /**
