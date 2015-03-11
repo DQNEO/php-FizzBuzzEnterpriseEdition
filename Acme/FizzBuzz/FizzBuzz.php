@@ -7,6 +7,24 @@ use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
 use Acme\FizzBuzz\Entity\Number;
 use Acme\FizzBuzz\RangeIterator;
 
+class Division
+{
+    private $divident;
+    private $divisor;
+
+    public function __construct($divident, $divisor)
+    {
+        $this->divident = $divident;
+        $this->divisor = $divisor;
+    }
+
+    public function isDividable()
+    {
+        return ($this->divident % $this->divisor === 0);
+    }
+
+}
+
 class FizzBuzz
 {
     private $start;
@@ -64,7 +82,8 @@ class FizzBuzz
 
     private function isDividable($target, $divisor)
     {
-        return ($target % $divisor === 0);
+        $division = new Division($target, $divisor);
+        return $division->isDividable();
     }
 
     public function output($entity)
