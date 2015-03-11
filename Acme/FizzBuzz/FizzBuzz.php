@@ -2,6 +2,10 @@
 namespace Acme\FizzBuzz;
 use Acme\FizzBuzz\WriterInterface;
 use Acme\FizzBuzz\Entity\Entity;
+use Acme\FizzBuzz\Entity\Fizz;
+use Acme\FizzBuzz\Entity\Buzz;
+use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
+use Acme\FizzBuzz\Entity\Number;
 
 class FizzBuzz
 {
@@ -25,20 +29,20 @@ class FizzBuzz
     {
         foreach (range($this->start, $max) as $n) {
             if ($n % $this->firstDevisor === 0 && $n % $this->secondDevisor === 0) {
-                $entity = new Entity("FizzBuzz");
+                $entity = new FizzBuzzEntity("FizzBuzz");
             } else if ($n % $this->firstDevisor === 0) {
-                $entity = new Entity("Fizz");
+                $entity = new Fizz("Fizz");
             } else if ($n % $this->secondDevisor === 0) {
-                $entity = new Entity("Buzz");
+                $entity = new Buzz("Buzz");
             } else {
-                $entity = new Entity($n);
+                $entity = new Number($n);
             }
 
             $this->output($entity);
         }
     }
 
-    public function output(Entity $entity)
+    public function output($entity)
     {
         $this->writer->write($entity->getValue() . "\n");
     }
