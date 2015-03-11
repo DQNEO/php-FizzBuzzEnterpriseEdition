@@ -14,4 +14,9 @@ class Integer
     {
         return $this->value;
     }
+
+    public function multiply(Integer $n)
+    {
+        return new self($this->value * $n->getValue());
+    }
 }

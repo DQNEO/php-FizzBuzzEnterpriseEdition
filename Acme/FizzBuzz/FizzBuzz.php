@@ -50,7 +50,7 @@ class FizzBuzz
      */
     private function getEntity(Divident $dividentObject)
     {
-        if ($dividentObject->isDividableBy($this->firstDivisor->getValue() * $this->secondDivisor->getValue())) {
+        if ($dividentObject->isDividableBy($this->firstDivisor->multiply($this->secondDivisor)->getValue())) {
             $entity = new FizzBuzzEntity;
         } else if ($dividentObject->isDividableBy($this->firstDivisor->getValue())) {
             $entity = new Fizz;
