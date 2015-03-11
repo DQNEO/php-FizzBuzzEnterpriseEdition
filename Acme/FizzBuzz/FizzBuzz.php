@@ -19,15 +19,15 @@ class FizzBuzz
 
     public function __construct($start, $firstDivisor, $secondDivisor, WriterInterface $writer)
     {
-        $this->start = $start;
-        $this->firstDivisor = $firstDivisor;
-        $this->secondDivisor = $secondDivisor;
+        $this->start = new Integer($start);
+        $this->firstDivisor = new Integer($firstDivisor);
+        $this->secondDivisor = new Integer($secondDivisor);
         $this->writer = $writer;
     }
 
     public function run($max)
     {
-        foreach ($this->getRangeIterator($this->start, $max) as $n) {
+        foreach ($this->getRangeIterator($this->start, new Integer($max)) as $n) {
             $dividentObject = new Divident($n);
             $entity = $this->getEntity($dividentObject);
             $this->output($entity);
@@ -41,7 +41,7 @@ class FizzBuzz
      */
     private function getRangeIterator($start, $end)
     {
-        return new RangeIterator($start, $end);
+        return new RangeIterator($start->getValue(), $end->getValue());
     }
 
     /**
@@ -50,11 +50,11 @@ class FizzBuzz
      */
     private function getEntity(Divident $dividentObject)
     {
-        if ($dividentObject->isDividableBy($this->firstDivisor * $this->secondDivisor)) {
+        if ($dividentObject->isDividableBy($this->firstDivisor->getValue() * $this->secondDivisor->getValue())) {
             $entity = new FizzBuzzEntity;
-        } else if ($dividentObject->isDividableBy($this->firstDivisor)) {
+        } else if ($dividentObject->isDividableBy($this->firstDivisor->getValue())) {
             $entity = new Fizz;
-        } else if ($dividentObject->isDividableBy($this->secondDivisor)) {
+        } else if ($dividentObject->isDividableBy($this->secondDivisor->getValue())) {
             $entity = new Buzz;
         } else {
             $entity = new Number($dividentObject->getValue());
