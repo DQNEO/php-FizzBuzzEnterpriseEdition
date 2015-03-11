@@ -1,5 +1,6 @@
 <?php
 namespace Acme\FizzBuzz;
+
 class RangeIterator implements \Iterator
 {
     private $start;
