@@ -1,5 +1,5 @@
 <?php
-namespace Acme\FizzBuzz;
+namespace Acme\FizzBuzz\Entity;
 
 class Entity
 {
