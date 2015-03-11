@@ -11,17 +11,17 @@ class FizzBuzz
 {
     private $start;
 
-    private $firstDevisor;
-    private $secondDevisor;
+    private $firstDivisor;
+    private $secondDivisor;
 
     /** @var WiterInterface */
     private $writer;
 
-    public function __construct($start, $firstDevisor, $secondDevisor, WriterInterface $writer)
+    public function __construct($start, $firstDivisor, $secondDivisor, WriterInterface $writer)
     {
         $this->start = $start;
-        $this->firstDevisor = $firstDevisor;
-        $this->secondDevisor = $secondDevisor;
+        $this->firstDivisor = $firstDivisor;
+        $this->secondDivisor = $secondDivisor;
         $this->writer = $writer;
     }
 
@@ -49,11 +49,11 @@ class FizzBuzz
      */
     private function getEntity($n)
     {
-        if ($this->isDevisable($n, $this->firstDevisor * $this->secondDevisor)) {
+        if ($this->isDividable($n, $this->firstDivisor * $this->secondDivisor)) {
             $entity = new FizzBuzzEntity;
-        } else if ($this->isDevisable($n, $this->firstDevisor)) {
+        } else if ($this->isDividable($n, $this->firstDivisor)) {
             $entity = new Fizz;
-        } else if ($this->isDevisable($n, $this->secondDevisor)) {
+        } else if ($this->isDividable($n, $this->secondDivisor)) {
             $entity = new Buzz;
         } else {
             $entity = new Number($n);
@@ -62,9 +62,9 @@ class FizzBuzz
         return $entity;
     }
 
-    private function isDevisable($target, $devisor)
+    private function isDividable($target, $divisor)
     {
-        return ($target % $devisor === 0);
+        return ($target % $divisor === 0);
     }
 
     public function output($entity)
