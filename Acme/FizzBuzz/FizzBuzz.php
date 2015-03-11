@@ -6,6 +6,23 @@ use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
 use Acme\FizzBuzz\Entity\Number;
 
+class RangeIterator
+{
+    private $star;
+    private $end;
+
+    public function __construct($start, $end)
+    {
+        $this->start = $start;
+        $this->end = $end;
+    }
+
+    public function toArray()
+    {
+        return range($this->start, $this->end);
+    }
+}
+
 class FizzBuzz
 {
     private $start;
@@ -34,7 +51,7 @@ class FizzBuzz
 
     private function getRange($start, $end)
     {
-        return range($start, $end);
+        return (new RangeIterator($start, $end))->toArray();
     }
 
     /**
