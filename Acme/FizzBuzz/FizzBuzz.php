@@ -1,6 +1,7 @@
 <?php
 namespace Acme\FizzBuzz;
 use Acme\FizzBuzz\WriterInterface;
+use Acme\FizzBuzz\Entity\AbstractEntity;
 use Acme\FizzBuzz\Entity\Fizz;
 use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
@@ -65,7 +66,7 @@ class FizzBuzz
         return $entity;
     }
 
-    public function output($entity)
+    public function output(AbstractEntity $entity)
     {
         $this->writer->write($entity->getValue() . "\n");
     }
