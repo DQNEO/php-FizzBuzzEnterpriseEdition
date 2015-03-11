@@ -33,6 +33,11 @@ class FizzBuzz
         }
     }
 
+    /**
+     * @param  int $start
+     * @param  int $end
+     * @return array
+     */
     private function getRange($start, $end)
     {
         return (new RangeIterator($start, $end))->toArray();
