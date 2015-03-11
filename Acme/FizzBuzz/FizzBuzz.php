@@ -62,9 +62,9 @@ class FizzBuzz
         return $entity;
     }
 
-    private function isDividable($target, $divisor)
+    private function isDividable($n, $divisor)
     {
-        $dividentObject = new Divident($target);
+        $dividentObject = new Divident($n);
         return $dividentObject->isDividableBy($divisor);
     }
 
