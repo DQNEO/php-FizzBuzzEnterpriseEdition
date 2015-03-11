@@ -27,7 +27,7 @@ class FizzBuzz
 
     public function run($max)
     {
-        foreach ($this->getRange($this->start, $max) as $n) {
+        foreach ($this->getRangeIterator($this->start, $max) as $n) {
             $entity = $this->getEntity($n);
             $this->output($entity);
         }
@@ -38,7 +38,7 @@ class FizzBuzz
      * @param  int $end
      * @return \Iterator
      */
-    private function getRange($start, $end)
+    private function getRangeIterator($start, $end)
     {
         return new RangeIterator($start, $end);
     }
