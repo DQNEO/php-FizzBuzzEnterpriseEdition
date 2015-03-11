@@ -12,9 +12,13 @@ use Acme\FizzBuzz\DataType\Divident;
 
 class FizzBuzzRunner
 {
+    /** @var Integer */
     private $start;
 
+    /** @var Integer */
     private $firstDivisor;
+
+    /** @var Integer */
     private $secondDivisor;
 
     /** @var WiterInterface */
