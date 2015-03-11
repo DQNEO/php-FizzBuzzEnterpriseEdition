@@ -51,16 +51,16 @@ class FizzBuzz
      * @param  int $n
      * @return AbstractEntity
      */
-    private function getEntity(Divident $dividentObject)
+    private function getEntity(Divident $divident)
     {
-        if ($dividentObject->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
+        if ($divident->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
             $entity = new FizzBuzzEntity;
-        } else if ($dividentObject->isDividableBy($this->firstDivisor)) {
+        } else if ($divident->isDividableBy($this->firstDivisor)) {
             $entity = new Fizz;
-        } else if ($dividentObject->isDividableBy($this->secondDivisor)) {
+        } else if ($divident->isDividableBy($this->secondDivisor)) {
             $entity = new Buzz;
         } else {
-            $entity = new Number($dividentObject->getValue());
+            $entity = new Number($divident->getValue());
         }
 
         return $entity;
