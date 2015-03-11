@@ -49,23 +49,18 @@ class FizzBuzz
      */
     private function getEntity($n)
     {
-        if ($this->isDividable($n, $this->firstDivisor * $this->secondDivisor)) {
+        $dividentObject = new Divident($n);
+        if ($dividentObject->isDividableBy($this->firstDivisor * $this->secondDivisor)) {
             $entity = new FizzBuzzEntity;
-        } else if ($this->isDividable($n, $this->firstDivisor)) {
+        } else if ($dividentObject->isDividableBy($this->firstDivisor)) {
             $entity = new Fizz;
-        } else if ($this->isDividable($n, $this->secondDivisor)) {
+        } else if ($dividentObject->isDividableBy($this->secondDivisor)) {
             $entity = new Buzz;
         } else {
             $entity = new Number($n);
         }
 
         return $entity;
-    }
-
-    private function isDividable($n, $divisor)
-    {
-        $dividentObject = new Divident($n);
-        return $dividentObject->isDividableBy($divisor);
     }
 
     public function output($entity)
