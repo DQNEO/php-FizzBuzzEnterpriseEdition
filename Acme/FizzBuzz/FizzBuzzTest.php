@@ -17,31 +17,31 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNew()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzRunner(1,1,1, $writer);
+        $fb = new FizzBuzzRunner(1,1, $writer);
         $this->assertInstanceOf("Acme\\FizzBuzz\\FizzBuzzRunner", $fb);
     }
 
     public function testRun1()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzRunner(1,3,5, $writer);
-        $fb->run(1);
+        $fb = new FizzBuzzRunner(3,5, $writer);
+        $fb->run(1,1);
         $this->assertEquals("1\n", $writer->buf);
     }
 
     public function testRun2()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzRunner(1,3,5, $writer);
-        $fb->run(2);
+        $fb = new FizzBuzzRunner(3,5, $writer);
+        $fb->run(1,2);
         $this->assertEquals("1\n2\n", $writer->buf);
     }
 
     public function testRun3()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzRunner(1,3,5, $writer);
-        $fb->run(3);
+        $fb = new FizzBuzzRunner(3,5, $writer);
+        $fb->run(1,3);
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
@@ -49,8 +49,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testRun16()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzRunner(1,3,5, $writer);
-        $fb->run(16);
+        $fb = new FizzBuzzRunner(3,5, $writer);
+        $fb->run(1,16);
 
         $expected ="1
 2

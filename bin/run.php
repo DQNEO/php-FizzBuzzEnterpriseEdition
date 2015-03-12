@@ -5,5 +5,6 @@ use Acme\FizzBuzz\FizzBuzzRunner;
 use Acme\FizzBuzz\Writer;
 
 $writer = new Writer;
-$fizzbuzz = new FizzBuzzRunner(1, 3, 5, $writer);
-$fizzbuzz->run($argv[1]);
+$fizzbuzz = new FizzBuzzRunner(3, 5, $writer);
+
+$fizzbuzz->run(1, $argv[1]);

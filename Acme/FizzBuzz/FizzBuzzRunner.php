@@ -13,9 +13,6 @@ use Acme\FizzBuzz\DataType\Divident;
 class FizzBuzzRunner
 {
     /** @var Integer */
-    private $start;
-
-    /** @var Integer */
     private $firstDivisor;
 
     /** @var Integer */
@@ -24,17 +21,16 @@ class FizzBuzzRunner
     /** @var WiterInterface */
     private $writer;
 
-    public function __construct($start, $firstDivisor, $secondDivisor, WriterInterface $writer)
+    public function __construct($firstDivisor, $secondDivisor, WriterInterface $writer)
     {
-        $this->start = new Integer($start);
         $this->firstDivisor = new Integer($firstDivisor);
         $this->secondDivisor = new Integer($secondDivisor);
         $this->writer = $writer;
     }
 
-    public function run($max)
+    public function run($start, $max)
     {
-        foreach ($this->getRangeIterator($this->start, new Integer($max)) as $n) {
+        foreach ($this->getRangeIterator(new Integer($start), new Integer($max)) as $n) {
             $entity = $this->getEntity(new Divident($n));
             $this->output($entity);
         }
