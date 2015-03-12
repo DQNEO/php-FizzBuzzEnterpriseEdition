@@ -1,6 +1,8 @@
 <?php
 use Acme\FizzBuzz\FizzBuzzRunner;
 use Acme\FizzBuzz\WriterInterface;
+use Acme\FizzBuzz\RangeIterator;
+use Acme\FizzBuzz\DataType\Integer;
 
 class MockWriter implements WriterInterface
 {
@@ -14,6 +16,11 @@ class MockWriter implements WriterInterface
 }
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
+    private function newRange($min, $max)
+    {
+        return new RangeIterator(new Integer($min), new Integer($max));
+    }
+
     public function testNew()
     {
         $writer = new MockWriter;
@@ -25,7 +32,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzRunner(3,5, $writer);
-        $fb->run(1,1);
+        $fb->run($this->newRange(1,1));
         $this->assertEquals("1\n", $writer->buf);
     }
 
@@ -33,7 +40,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzRunner(3,5, $writer);
-        $fb->run(1,2);
+        $fb->run($this->newRange(1,2));
         $this->assertEquals("1\n2\n", $writer->buf);
     }
 
@@ -41,7 +48,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzRunner(3,5, $writer);
-        $fb->run(1,3);
+        $fb->run($this->newRange(1,3));
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
@@ -50,7 +57,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzRunner(3,5, $writer);
-        $fb->run(1,16);
+        $fb->run($this->newRange(1,16));
 
         $expected ="1
 2

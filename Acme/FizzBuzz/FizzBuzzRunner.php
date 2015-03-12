@@ -6,9 +6,9 @@ use Acme\FizzBuzz\Entity\Fizz;
 use Acme\FizzBuzz\Entity\Buzz;
 use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
 use Acme\FizzBuzz\Entity\Number;
-use Acme\FizzBuzz\RangeIterator;
 use Acme\FizzBuzz\DataType\Integer;
 use Acme\FizzBuzz\DataType\Divident;
+use Acme\FizzBuzz\RangeIterator;
 
 class FizzBuzzRunner
 {
@@ -28,9 +28,9 @@ class FizzBuzzRunner
         $this->writer = $writer;
     }
 
-    public function run($start, $max)
+    public function run(RangeIterator $range)
     {
-        foreach ($this->getRangeIterator(new Integer($start), new Integer($max)) as $n) {
+        foreach ($range as $n) {
             $entity = $this->getEntity(new Divident($n));
             $this->output($entity);
         }
