@@ -21,10 +21,10 @@ class FizzBuzzRunner
     /** @var WiterInterface */
     private $writer;
 
-    public function __construct($firstDivisor, $secondDivisor, WriterInterface $writer)
+    public function __construct(Integer $firstDivisor, Integer $secondDivisor, WriterInterface $writer)
     {
-        $this->firstDivisor = new Integer($firstDivisor);
-        $this->secondDivisor = new Integer($secondDivisor);
+        $this->firstDivisor = $firstDivisor;
+        $this->secondDivisor = $secondDivisor;
         $this->writer = $writer;
     }
 
