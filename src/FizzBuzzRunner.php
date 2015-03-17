@@ -1,6 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
-use DQNEO\FizzBuzzEnterpriseEdition\WriterInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;

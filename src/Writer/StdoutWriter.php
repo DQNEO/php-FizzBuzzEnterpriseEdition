@@ -1,5 +1,5 @@
 <?php
-namespace DQNEO\FizzBuzzEnterpriseEdition;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Writer;
 class StdoutWriter implements WriterInterface
 {
     public function write($string)

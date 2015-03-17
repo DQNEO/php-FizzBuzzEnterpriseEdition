@@ -2,7 +2,7 @@
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzRunner;
-use DQNEO\FizzBuzzEnterpriseEdition\StdoutWriter;
+use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 

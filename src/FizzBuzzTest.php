@@ -1,6 +1,6 @@
 <?php
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzRunner;
-use DQNEO\FizzBuzzEnterpriseEdition\WriterInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
