@@ -7,7 +7,7 @@ abstract class AbstractEntity
 
     public function __toString()
     {
-        return (string)$this->object->getValue();
+        return (string) $this->object->getValue();
     }
 }
 
