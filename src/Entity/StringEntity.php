@@ -8,5 +8,12 @@ abstract class StringEntity extends AbstractEntity
     {
         $this->object = new String($this->value);
     }
+
+    // singleton
+    public static function getInstance()
+    {
+        static $obj = null;
+        return $obj ?: $obj = new static;
+    }
 }
 

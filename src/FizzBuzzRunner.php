@@ -43,11 +43,11 @@ class FizzBuzzRunner
     private function getEntity(Divident $divident)
     {
         if ($divident->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
-            $entity = new FizzBuzz;
+            $entity = FizzBuzz::getInstance();
         } else if ($divident->isDividableBy($this->firstDivisor)) {
-            $entity = new Fizz;
+            $entity = Fizz::getInstance();
         } else if ($divident->isDividableBy($this->secondDivisor)) {
-            $entity = new Buzz;
+            $entity = Buzz::getInstance();
         } else {
             $entity = new Number($divident);
         }
