@@ -8,6 +8,12 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class CLI
 {
+    /**
+     * CLI entry point
+     *
+     * @param integer $argc num of arguments
+     * @param array   $argv list of arguments
+     */
     public static function main($argc, $argv)
     {
         $writer = new Writer;
