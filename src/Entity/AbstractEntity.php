@@ -5,16 +5,9 @@ abstract class AbstractEntity
 {
     protected $value;
 
-    public function __construct($value = null)
+    public function __toString()
     {
-        if (isset($value)) {
-            $this->value = $value;
-        }
-    }
-
-    public function getValue()
-    {
-        return $this->value;
+        return (string) $this->object->getValue();
     }
 }
 

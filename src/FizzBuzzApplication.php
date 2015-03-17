@@ -1,16 +1,15 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
-use DQNEO\FizzBuzzEnterpriseEdition\WriterInterface;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz as FizzBuzzEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Number;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
-class FizzBuzzRunner
+class FizzBuzzApplication
 {
     /** @var Integer */
     private $firstDivisor;
@@ -32,18 +31,8 @@ class FizzBuzzRunner
     {
         foreach ($range as $n) {
             $entity = $this->getEntity(new Divident($n));
-            $this->output($entity);
+            $this->writer->writeln($entity);
         }
-    }
-
-    /**
-     * @param  Integer $start
-     * @param  Integer $end
-     * @return \Iterator
-     */
-    private function getRangeIterator(Integer $start, Integer $end)
-    {
-        return new RangeIterator($start, $end);
     }
 
     /**
@@ -53,24 +42,15 @@ class FizzBuzzRunner
     private function getEntity(Divident $divident)
     {
         if ($divident->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
-            $entity = new FizzBuzzEntity;
+            return FizzBuzz::getInstance();
         } else if ($divident->isDividableBy($this->firstDivisor)) {
-            $entity = new Fizz;
+            return Fizz::getInstance();
         } else if ($divident->isDividableBy($this->secondDivisor)) {
-            $entity = new Buzz;
+            return Buzz::getInstance();
         } else {
-            $entity = new Number($divident->getValue());
+            return new Number($divident);
         }
 
-        return $entity;
     }
 
-    /**
-     * @param  AbstractEntity $entity
-     * @return void
-     */
-    public function output(AbstractEntity $entity)
-    {
-        $this->writer->write($entity->getValue() . "\n");
-    }
 }
