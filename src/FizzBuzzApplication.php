@@ -9,7 +9,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
-class FizzBuzzRunner
+class FizzBuzzApplication
 {
     /** @var Integer */
     private $firstDivisor;

@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzRunner;
+use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
@@ -17,7 +17,7 @@ class CLI
     public static function main($argc, $argv)
     {
         $writer = new StdoutWriter;
-        $fizzbuzz = new FizzBuzzRunner(new Integer(3), new Integer(5), $writer);
+        $fizzbuzz = new FizzBuzzApplication(new Integer(3), new Integer(5), $writer);
 
         if ($argc <= 1) {
             echo("invalid argument\n");
