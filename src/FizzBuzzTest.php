@@ -14,6 +14,11 @@ class MockWriter implements WriterInterface
         $this->buf .= $string;
     }
 
+    public function writeln($string)
+    {
+        $this->buf .= $string . "\n";
+    }
+
 }
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {

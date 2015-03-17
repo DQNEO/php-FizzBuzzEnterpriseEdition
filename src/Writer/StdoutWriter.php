@@ -6,4 +6,9 @@ class StdoutWriter implements WriterInterface
     {
         echo $string;
     }
+
+    public function writeln($string)
+    {
+        echo $string . "\n";
+    }
 }
