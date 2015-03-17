@@ -13,6 +13,7 @@ class CLI
      *
      * @param integer $argc num of arguments
      * @param array   $argv list of arguments
+     * @return integer exit_status
      */
     public static function main($argc, $argv)
     {
@@ -21,7 +22,7 @@ class CLI
 
         if ($argc <= 1) {
             echo("invalid argument\n");
-            exit;
+            return 1;
         }
 
         $range = RangeIteratorFactory::factory(1, $argv[1]);
