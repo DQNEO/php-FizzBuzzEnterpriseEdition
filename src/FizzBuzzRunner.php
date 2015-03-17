@@ -37,16 +37,6 @@ class FizzBuzzRunner
     }
 
     /**
-     * @param  Integer $start
-     * @param  Integer $end
-     * @return \Iterator
-     */
-    private function getRangeIterator(Integer $start, Integer $end)
-    {
-        return new RangeIterator($start, $end);
-    }
-
-    /**
      * @param  Divident $divident
      * @return AbstractEntity
      */
