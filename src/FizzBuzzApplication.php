@@ -17,7 +17,7 @@ class FizzBuzzApplication
     /** @var Integer */
     private $secondDivisor;
 
-    /** @var WiterInterface */
+    /** @var DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface */
     private $writer;
 
     public function __construct(Integer $firstDivisor, Integer $secondDivisor, WriterInterface $writer)
