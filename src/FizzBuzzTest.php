@@ -1,4 +1,5 @@
 <?php
+namespace DQNEO\FizzBuzzEnterpriseEdition;
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
