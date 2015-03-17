@@ -4,14 +4,14 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class Number extends AbstractEntity
 {
-    public function __construct(Integer $value)
+    public function __construct(Integer $object)
     {
-        $this->value = $value;
+        $this->object = $object;
     }
 
     public function __toString()
     {
-        return (string)$this->value->getValue();
+        return (string)$this->object->getValue();
     }
 
 }
