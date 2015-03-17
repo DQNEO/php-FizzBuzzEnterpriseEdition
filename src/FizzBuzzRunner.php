@@ -71,7 +71,7 @@ class FizzBuzzRunner
      */
     public function output(AbstractEntity $entity)
     {
-        $this->writer->write($entity->getValue());
+        $this->writer->write($entity);
         $this->writer->write("\n");
     }
 }
