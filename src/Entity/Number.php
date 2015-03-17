@@ -4,9 +4,9 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class Number extends AbstractEntity
 {
-    public function __construct($value)
+    public function __construct(Integer $value)
     {
-        $this->value = new Integer($value);
+        $this->value = $value;
     }
 
     public function __toString()

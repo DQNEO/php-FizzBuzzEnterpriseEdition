@@ -49,7 +49,7 @@ class FizzBuzzRunner
         } else if ($divident->isDividableBy($this->secondDivisor)) {
             $entity = new Buzz;
         } else {
-            $entity = new Number($divident->getValue());
+            $entity = new Number($divident);
         }
 
         return $entity;
