@@ -3,6 +3,8 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\DataType;
 
 class String
 {
+    const NEW_LINE = "\n";
+
     protected $value;
 
     public function __construct($value)

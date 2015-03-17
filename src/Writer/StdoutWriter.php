@@ -1,5 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Writer;
+namespace DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
+
 class StdoutWriter implements WriterInterface
 {
     public function write($string)
@@ -9,6 +11,6 @@ class StdoutWriter implements WriterInterface
 
     public function writeln($string)
     {
-        echo $string . "\n";
+        echo $string . String::NEW_LINE;
     }
 }
