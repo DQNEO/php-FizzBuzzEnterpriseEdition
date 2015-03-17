@@ -32,7 +32,7 @@ class FizzBuzzRunner
     {
         foreach ($range as $n) {
             $entity = $this->getEntity(new Divident($n));
-            $this->output($entity);
+            $this->writer->writeln($entity);
         }
     }
 
@@ -65,12 +65,4 @@ class FizzBuzzRunner
         return $entity;
     }
 
-    /**
-     * @param  AbstractEntity $entity
-     * @return void
-     */
-    public function output(AbstractEntity $entity)
-    {
-        $this->writer->writeln($entity);
-    }
 }
