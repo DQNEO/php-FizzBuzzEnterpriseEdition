@@ -1,5 +1,7 @@
 <?php
 spl_autoload_register(function($class){
-                          $slashed = strtr($class, '\\', '/');
-                          require_once __DIR__ . '/' . $slashed . '.php';
+                          $elememts = explode('\\', $class);
+                          array_shift($elememts);
+                          array_shift($elememts);
+                          require_once __DIR__ . '/src/' . join('/', $elememts) . '.php';
                       });

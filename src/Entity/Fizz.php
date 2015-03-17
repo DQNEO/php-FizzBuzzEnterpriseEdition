@@ -1,5 +1,5 @@
 <?php
-namespace Acme\FizzBuzz\Entity;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
 class Fizz extends AbstractEntity
 {

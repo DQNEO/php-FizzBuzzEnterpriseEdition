@@ -1,6 +1,6 @@
 <?php
-namespace Acme\FizzBuzz;
-use Acme\FizzBuzz\DataType\Integer;
+namespace DQNEO\FizzBuzzEnterpriseEdition;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 /**
  *  A helper class to generate a RangeIterator

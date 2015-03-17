@@ -1,14 +1,14 @@
 <?php
-namespace Acme\FizzBuzz;
-use Acme\FizzBuzz\WriterInterface;
-use Acme\FizzBuzz\Entity\AbstractEntity;
-use Acme\FizzBuzz\Entity\Fizz;
-use Acme\FizzBuzz\Entity\Buzz;
-use Acme\FizzBuzz\Entity\FizzBuzz as FizzBuzzEntity;
-use Acme\FizzBuzz\Entity\Number;
-use Acme\FizzBuzz\DataType\Integer;
-use Acme\FizzBuzz\DataType\Divident;
-use Acme\FizzBuzz\RangeIterator;
+namespace DQNEO\FizzBuzzEnterpriseEdition;
+use DQNEO\FizzBuzzEnterpriseEdition\WriterInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz as FizzBuzzEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\Number;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
+use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
 class FizzBuzzRunner
 {

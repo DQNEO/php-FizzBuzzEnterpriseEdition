@@ -1,5 +1,5 @@
 <?php
-namespace Acme\FizzBuzz;
+namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 interface WriterInterface
 {

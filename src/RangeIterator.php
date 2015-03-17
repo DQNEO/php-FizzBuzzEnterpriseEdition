@@ -1,7 +1,7 @@
 <?php
-namespace Acme\FizzBuzz;
+namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use Acme\FizzBuzz\DataType\Integer;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class RangeIterator implements \Iterator
 {
