@@ -20,5 +20,7 @@ class CLI
 
         $range = RangeIteratorFactory::factory(1, $argv[1]);
         $fizzbuzz->run($range);
+
+        return 0;
     }
 }
