@@ -1,6 +1,6 @@
 language: php
 php:
-  - HHVM
+  - hhvm
   - 7.0
   - 5.6
   - 5.5
