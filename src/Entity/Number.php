@@ -9,10 +9,5 @@ class Number extends AbstractEntity
         $this->object = $object;
     }
 
-    public function __toString()
-    {
-        return (string)$this->object->getValue();
-    }
-
 }
 

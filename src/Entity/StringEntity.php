@@ -8,10 +8,5 @@ abstract class StringEntity extends AbstractEntity
     {
         $this->object = new String($this->value);
     }
-
-    public function __toString()
-    {
-        return (string)$this->object->getValue();
-    }
 }
 
