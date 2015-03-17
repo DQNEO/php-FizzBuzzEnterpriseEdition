@@ -1,9 +1,9 @@
 <?php
-use Acme\FizzBuzz\FizzBuzzRunner;
-use Acme\FizzBuzz\WriterInterface;
-use Acme\FizzBuzz\RangeIterator;
-use Acme\FizzBuzz\RangeIteratorFactory;
-use Acme\FizzBuzz\DataType\Integer;
+use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzRunner;
+use DQNEO\FizzBuzzEnterpriseEdition\WriterInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
+use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class MockWriter implements WriterInterface
 {
@@ -22,7 +22,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzRunner(new Integer(1), new Integer(1), $writer);
-        $this->assertInstanceOf("Acme\\FizzBuzz\\FizzBuzzRunner", $fb);
+        $this->assertInstanceOf("DQNEO\\FizzBuzzEnterpriseEdition\\FizzBuzzRunner", $fb);
     }
 
     public function testRun1()

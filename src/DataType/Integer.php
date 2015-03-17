@@ -1,5 +1,5 @@
 <?php
-namespace Acme\FizzBuzz\DataType;
+namespace DQNEO\FizzBuzzEnterpriseEdition\DataType;
 
 class Integer
 {
