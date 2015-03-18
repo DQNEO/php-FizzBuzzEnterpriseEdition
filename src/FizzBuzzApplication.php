@@ -52,11 +52,11 @@ class FizzBuzzApplication
      */
     private function getEntity(Divident $divident)
     {
-        if ($divident->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
+        if ($divident->isDivisible($this->firstDivisor->multiply($this->secondDivisor))) {
             return FizzBuzz::getInstance();
-        } elseif ($divident->isDividableBy($this->firstDivisor)) {
+        } elseif ($divident->isDivisible($this->firstDivisor)) {
             return Fizz::getInstance();
-        } elseif ($divident->isDividableBy($this->secondDivisor)) {
+        } elseif ($divident->isDivisible($this->secondDivisor)) {
             return Buzz::getInstance();
         } else {
             return new Number($divident);

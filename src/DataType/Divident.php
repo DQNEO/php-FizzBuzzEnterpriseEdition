@@ -8,7 +8,7 @@ class Divident extends Integer
         $this->value = $divisor->getValue();
     }
 
-    public function isDividableBy(Integer $divisor)
+    public function isDivisible(Integer $divisor)
     {
         return ($this->value % $divisor->getValue() === 0);
     }
