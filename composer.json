@@ -1,6 +1,7 @@
 {
   "name": "dqneo/fizzbuzz-enterprise-edition",
   "description": "FizzBuzz Enterprise Edition",
+  "license": "GPL-3",
   "type": "application",
   "keywords": ["fizzbuzz", "fizz buzz"],
   "authors": [
