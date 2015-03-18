@@ -17,9 +17,13 @@ composer install
 ```
 ./bin/fizzbuzz.php 15
 ```
-
 # TODO
 * enable to select various writer (stdout, stderr, mail, fluent, file, null, monolog)
 * enable web interface (use Slim or Siliex with Symfony Reponse) 
 * use Symfony Console
 * measure code coverage
+
+# SEE ALSO
+
+* https://github.com/DQNEO/php-HelloWorldEnterpriseEdition
+* https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
