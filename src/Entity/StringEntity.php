@@ -4,12 +4,17 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
 
 abstract class StringEntity extends AbstractEntity
 {
+    /** @var string */
+    protected $value;
+
     public function __construct()
     {
         $this->object = new String($this->value);
     }
 
-    // singleton
+    /**
+     * @return StringEntity
+     */ 
     public static function getInstance()
     {
         static $obj = null;
