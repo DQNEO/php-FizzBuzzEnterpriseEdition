@@ -11,4 +11,4 @@ FizzBuzz Super Object Oriented Enterprice Edition
 * investigate PHPUnit internals
 * measure code coverage
 * apply PHPCS
-* follow PSR0,1,2, and 4
+* follow PSR1,2
