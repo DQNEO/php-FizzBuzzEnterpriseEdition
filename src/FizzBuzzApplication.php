@@ -20,6 +20,12 @@ class FizzBuzzApplication
     /** @var \DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface */
     private $writer;
 
+    /**
+     * @param Integer $firstDivisor
+     * @param Integer $secondDivisor
+     * @param WriterInterface $writer
+     * @return void
+     */
     public function __construct(Integer $firstDivisor, Integer $secondDivisor, WriterInterface $writer)
     {
         $this->firstDivisor = $firstDivisor;
@@ -27,6 +33,10 @@ class FizzBuzzApplication
         $this->writer = $writer;
     }
 
+    /**
+     * @param RangeIterator $range
+     * @return void
+     */
     public function run(RangeIterator $range)
     {
         foreach ($range as $n) {
