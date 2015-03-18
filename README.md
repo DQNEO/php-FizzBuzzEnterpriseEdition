@@ -15,7 +15,7 @@ composer install
 # Usage
 
 ```
-./bin/fizzbuzz.php 15
+./bin/fizzbuzz.php 100
 ```
 
 # FizzBuzz
