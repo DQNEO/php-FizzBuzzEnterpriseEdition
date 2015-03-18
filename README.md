@@ -1,4 +1,4 @@
-# php FizzBuzz
+# php FizzBuzz Enterprise Edition
 
 [![Build Status](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition.svg?branch=develop)](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition)
 
