@@ -4,6 +4,20 @@
 
 FizzBuzz Super Object Oriented Enterprice Edition
 
+# INSTALL
+
+```
+git clone https://github.com/DQNEO/php-FizzBuzzEnterpriseEdition.git
+cd php-FizzBuzzEnterpriseEdition
+composer install
+```
+
+# Usage
+
+```
+./bin/fizzbuzz.php 10
+```
+
 # TODO
 * enable to select various writer (stdout, stderr, mail, fluent, file, null, monolog)
 * enable web interface (use Slim or Siliex with Symfony Reponse) 
