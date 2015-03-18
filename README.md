@@ -5,7 +5,6 @@
 FizzBuzz Super Object Oriented Enterprice Edition
 
 # TODO
-* change namespace and repository name
 * enable to select various writer (stdout, stderr, mail, fluent, file, null, monolog)
 * enable web interface (use Slim or Siliex with Symfony Reponse) 
 * use Symfony Console
