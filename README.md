@@ -10,4 +10,3 @@ FizzBuzz Super Object Oriented Enterprice Edition
 * use Symfony Console
 * investigate PHPUnit internals
 * measure code coverage
-* apply PHPCS
