@@ -8,5 +8,4 @@ FizzBuzz Super Object Oriented Enterprice Edition
 * enable to select various writer (stdout, stderr, mail, fluent, file, null, monolog)
 * enable web interface (use Slim or Siliex with Symfony Reponse) 
 * use Symfony Console
-* investigate PHPUnit internals
 * measure code coverage
