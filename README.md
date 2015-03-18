@@ -4,7 +4,7 @@
 
 FizzBuzz Super Object Oriented Enterprice Edition
 
-# INSTALL
+# INSTALLATION
 
 ```
 git clone https://github.com/DQNEO/php-FizzBuzzEnterpriseEdition.git
