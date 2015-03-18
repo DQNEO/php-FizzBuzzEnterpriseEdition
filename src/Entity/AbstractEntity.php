@@ -3,7 +3,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
 abstract class AbstractEntity
 {
-    protected $value;
+    /** @var object */
     protected $object;
 
     public function __toString()
