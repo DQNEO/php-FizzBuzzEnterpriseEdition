@@ -1,6 +1,25 @@
 {
+  "name": "dqneo/fizzbuzz-enterprise-edition",
+  "description": "FizzBuzz Enterprise Edition",
+  "type": "application",
+  "keywords": ["fizzbuzz", "fizz buzz"],
+  "authors": [
+        { "name": "DQNEO", "role" : "Administrator"}
+  ],
   "require": {
     "php" : ">=5.4.0",
     "phpunit/phpunit": "~4.5"
+  },
+  "bin" : [
+    "fizzbuzz"
+  ],
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "DQNEO\\FizzBuzzEnterpriseEdition\\": "src/"
+    }
   }
+
 }
