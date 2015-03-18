@@ -17,7 +17,7 @@ class FizzBuzzApplication
     /** @var Integer */
     private $secondDivisor;
 
-    /** @var \DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface */
+    /** @var WriterInterface */
     private $writer;
 
     /**
