@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition.svg?branch=develop)](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition)
 
-FizzBuzz Super Object Oriented Enterprise Edition
+FizzBuzz with too much object oriented programming.
 
 # INSTALLATION
 
