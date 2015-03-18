@@ -6,11 +6,11 @@ class StdoutWriter implements WriterInterface
 {
     public function write($string)
     {
-        echo $string;
+        fwrite(STDOUT, $string);
     }
 
     public function writeln($string)
     {
-        echo $string . String::NEW_LINE;
+        fwrite(STDOUT, $string . String::NEW_LINE);
     }
 }
