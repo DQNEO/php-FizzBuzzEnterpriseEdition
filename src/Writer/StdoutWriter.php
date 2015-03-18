@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Writer;
+
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
 
 class StdoutWriter implements WriterInterface

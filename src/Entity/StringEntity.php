@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
+
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
 
 abstract class StringEntity extends AbstractEntity
@@ -14,11 +15,10 @@ abstract class StringEntity extends AbstractEntity
 
     /**
      * @return StringEntity
-     */ 
+     */
     public static function getInstance()
     {
         static $obj = null;
         return $obj ?: $obj = new static;
     }
 }
-

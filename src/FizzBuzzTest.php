@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
+
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
@@ -19,7 +20,6 @@ class MockWriter implements WriterInterface
     {
         $this->buf .= $string . "\n";
     }
-
 }
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
@@ -35,7 +35,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzApplication(new Integer(3), new Integer(5), $writer);
-        $fb->run(RangeIteratorFactory::factory(1,1));
+        $fb->run(RangeIteratorFactory::factory(1, 1));
         $this->assertEquals("1\n", $writer->buf);
     }
 
@@ -43,7 +43,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzApplication(new Integer(3), new Integer(5), $writer);
-        $fb->run(RangeIteratorFactory::factory(1,2));
+        $fb->run(RangeIteratorFactory::factory(1, 2));
         $this->assertEquals("1\n2\n", $writer->buf);
     }
 
@@ -51,7 +51,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzApplication(new Integer(3), new Integer(5), $writer);
-        $fb->run(RangeIteratorFactory::factory(1,3));
+        $fb->run(RangeIteratorFactory::factory(1, 3));
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
@@ -60,7 +60,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $writer = new MockWriter;
         $fb = new FizzBuzzApplication(new Integer(3), new Integer(5), $writer);
-        $fb->run(RangeIteratorFactory::factory(1,16));
+        $fb->run(RangeIteratorFactory::factory(1, 16));
 
         $expected ="1
 2
@@ -81,5 +81,4 @@ FizzBuzz
 ";
         $this->assertEquals($expected, $writer->buf);
     }
-
 }

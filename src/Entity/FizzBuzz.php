@@ -6,4 +6,3 @@ class FizzBuzz extends StringEntity
     /** @var string */
     protected $value = "FizzBuzz";
 }
-

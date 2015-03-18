@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
+
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;
@@ -53,14 +54,12 @@ class FizzBuzzApplication
     {
         if ($divident->isDividableBy($this->firstDivisor->multiply($this->secondDivisor))) {
             return FizzBuzz::getInstance();
-        } else if ($divident->isDividableBy($this->firstDivisor)) {
+        } elseif ($divident->isDividableBy($this->firstDivisor)) {
             return Fizz::getInstance();
-        } else if ($divident->isDividableBy($this->secondDivisor)) {
+        } elseif ($divident->isDividableBy($this->secondDivisor)) {
             return Buzz::getInstance();
         } else {
             return new Number($divident);
         }
-
     }
-
 }

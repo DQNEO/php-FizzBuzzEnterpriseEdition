@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
+
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 /**

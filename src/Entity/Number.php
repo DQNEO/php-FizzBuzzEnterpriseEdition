@@ -1,5 +1,6 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
+
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Integer;
 
 class Number extends AbstractEntity
@@ -12,6 +13,4 @@ class Number extends AbstractEntity
     {
         $this->object = $object;
     }
-
 }
-

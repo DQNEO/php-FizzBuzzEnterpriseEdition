@@ -1,5 +1,5 @@
 <?php
-spl_autoload_register(function($class){
+spl_autoload_register(function ($class) {
                           $elememts = explode('\\', $class);
                           array_shift($elememts);
                           array_shift($elememts);

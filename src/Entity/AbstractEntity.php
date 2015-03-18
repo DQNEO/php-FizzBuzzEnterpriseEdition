@@ -11,4 +11,3 @@ abstract class AbstractEntity
         return (string) $this->object->getValue();
     }
 }
-

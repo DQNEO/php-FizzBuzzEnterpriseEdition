@@ -59,6 +59,4 @@ class RangeIterator implements \Iterator
     {
         return $this->current <= $this->end->getValue();
     }
-
 }
-
