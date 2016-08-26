@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;

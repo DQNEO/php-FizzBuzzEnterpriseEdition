@@ -1,6 +1,8 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
@@ -11,12 +13,12 @@ class MockWriter implements WriterInterface
 {
     public $buf = "";
 
-    public function write($string)
+    public function write(AbstractEntity $string)
     {
         $this->buf .= $string;
     }
 
-    public function writeln($string)
+    public function writeln(AbstractEntity $string)
     {
         $this->buf .= $string . "\n";
     }
