@@ -8,14 +8,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
 
 class CLI
 {
-    /**
-     * CLI entry point
-     *
-     * @param integer $argc num of arguments
-     * @param array   $argv list of arguments
-     * @return integer exit_status
-     */
-    public static function main($argc, $argv)
+    public static function main(int $argc, array $argv): int
     {
         $writer = new StdoutWriter;
         $fizzbuzz = new FizzBuzzApplication(new IntegerEntity(3), new IntegerEntity(5), $writer);
