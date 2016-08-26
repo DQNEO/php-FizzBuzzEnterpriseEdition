@@ -5,7 +5,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\Number;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
@@ -59,7 +59,7 @@ class FizzBuzzApplication
         } elseif ($divident->isDivisible($this->secondDivisor)) {
             return Buzz::getInstance();
         } else {
-            return new Number($divident);
+            return new NumberEntity($divident);
         }
     }
 }

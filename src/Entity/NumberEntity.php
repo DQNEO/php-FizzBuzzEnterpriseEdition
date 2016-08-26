@@ -3,7 +3,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
 
-class Number extends AbstractEntity
+class NumberEntity extends AbstractEntity
 {
 
     /**
