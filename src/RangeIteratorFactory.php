@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
@@ -8,11 +9,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
  */
 class RangeIteratorFactory
 {
-    /**
-     *  @param int $min
-     *  @param int $max
-     */
-    public static function factory($min, $max)
+    public static function factory(int $min, int $max): RangeIterator
     {
         return new RangeIterator(new IntegerValue($min), new IntegerValue($max));
     }

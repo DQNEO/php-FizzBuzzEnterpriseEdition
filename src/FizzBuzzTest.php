@@ -1,6 +1,8 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
@@ -11,12 +13,12 @@ class MockWriter implements WriterInterface
 {
     public $buf = "";
 
-    public function write($string)
+    public function write(AbstractEntity $string)
     {
         $this->buf .= $string;
     }
 
-    public function writeln($string)
+    public function writeln(AbstractEntity $string)
     {
         $this->buf .= $string . "\n";
     }
@@ -26,14 +28,16 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNew()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzApplication(new IntegerValue(1), new IntegerValue(1), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(1), new IntegerValue(1));
+        $fb = new FizzBuzzApplication($logic, $writer);
         $this->assertInstanceOf("DQNEO\\FizzBuzzEnterpriseEdition\\FizzBuzzApplication", $fb);
     }
 
     public function testRun1()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+        $fb = new FizzBuzzApplication($logic, $writer);
         $fb->run(RangeIteratorFactory::factory(1, 1));
         $this->assertEquals("1\n", $writer->buf);
     }
@@ -41,7 +45,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testRun2()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+        $fb = new FizzBuzzApplication($logic, $writer);
         $fb->run(RangeIteratorFactory::factory(1, 2));
         $this->assertEquals("1\n2\n", $writer->buf);
     }
@@ -49,7 +54,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testRun3()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+        $fb = new FizzBuzzApplication($logic, $writer);
         $fb->run(RangeIteratorFactory::factory(1, 3));
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
@@ -58,7 +64,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testRun16()
     {
         $writer = new MockWriter;
-        $fb = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+        $fb = new FizzBuzzApplication($logic, $writer);
         $fb->run(RangeIteratorFactory::factory(1, 16));
 
         $expected ="1

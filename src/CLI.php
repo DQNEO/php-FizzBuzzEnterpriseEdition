@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
@@ -16,8 +17,10 @@ class CLI
         }
 
         $writer = new StdoutWriter;
-        $fizzbuzz = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
-        $range = RangeIteratorFactory::factory(1, $argv[1]);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+
+        $fizzbuzz = new FizzBuzzApplication($logic, $writer);
+        $range = RangeIteratorFactory::factory(1, (int)$argv[1]);
         $fizzbuzz->run($range);
 
         return 0;

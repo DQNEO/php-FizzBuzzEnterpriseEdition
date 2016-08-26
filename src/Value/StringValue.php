@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition\Value;
 
 class StringValue
@@ -7,12 +8,12 @@ class StringValue
 
     protected $value;
 
-    public function __construct($value)
+    public function __construct(string $value)
     {
         $this->value = $value;
     }
 
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
