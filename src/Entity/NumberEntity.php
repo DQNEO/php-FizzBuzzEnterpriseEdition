@@ -5,7 +5,6 @@ use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
 
 class NumberEntity extends AbstractEntity
 {
-
     /**
      * @param Integer $object
      */

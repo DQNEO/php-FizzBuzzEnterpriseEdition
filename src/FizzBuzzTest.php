@@ -23,7 +23,6 @@ class MockWriter implements WriterInterface
 }
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testNew()
     {
         $writer = new MockWriter;

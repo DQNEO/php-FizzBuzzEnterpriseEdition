@@ -4,6 +4,6 @@ test :
 	vendor/bin/phpunit
 	tests/functional/test.sh
 
-fix :
-	php-cs-fixer fix . --level=psr2
+cs-fix :
+	php-cs-fixer fix . --level=psr2 || true
 
