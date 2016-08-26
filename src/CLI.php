@@ -4,7 +4,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition;
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class CLI
 {

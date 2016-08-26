@@ -6,8 +6,8 @@ use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
 class FizzBuzzApplication

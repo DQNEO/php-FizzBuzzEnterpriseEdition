@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\StringValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 
 abstract class AbstractStringEntity extends AbstractEntity
 {

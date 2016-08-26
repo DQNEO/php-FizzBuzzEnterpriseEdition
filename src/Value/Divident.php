@@ -1,5 +1,5 @@
 <?php
-namespace DQNEO\FizzBuzzEnterpriseEdition\DataType;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Value;
 
 class Divident extends IntegerValue
 {

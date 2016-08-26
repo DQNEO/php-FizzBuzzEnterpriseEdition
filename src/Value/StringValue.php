@@ -1,8 +1,10 @@
 <?php
-namespace DQNEO\FizzBuzzEnterpriseEdition\DataType;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Value;
 
-class IntegerValue
+class StringValue
 {
+    const NEW_LINE = "\n";
+
     protected $value;
 
     public function __construct($value)
@@ -13,10 +15,5 @@ class IntegerValue
     public function getValue()
     {
         return $this->value;
-    }
-
-    public function multiply(IntegerValue $n)
-    {
-        return new self($this->value * $n->getValue());
     }
 }

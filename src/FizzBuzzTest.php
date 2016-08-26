@@ -5,7 +5,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class MockWriter implements WriterInterface
 {

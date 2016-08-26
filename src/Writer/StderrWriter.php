@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Writer;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\StringValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 
 class StderrWriter implements WriterInterface
 {

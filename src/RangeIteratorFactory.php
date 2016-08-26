@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 /**
  *  A helper class to generate a RangeIterator

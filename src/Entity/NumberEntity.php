@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class NumberEntity extends AbstractEntity
 {
