@@ -4,7 +4,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
@@ -53,7 +53,7 @@ class FizzBuzzApplication
     private function getEntity(Divident $divident)
     {
         if ($divident->isDivisible($this->firstDivisor->multiply($this->secondDivisor))) {
-            return FizzBuzz::getInstance();
+            return FizzBuzzEntity::getInstance();
         } elseif ($divident->isDivisible($this->firstDivisor)) {
             return FizzEntity::getInstance();
         } elseif ($divident->isDivisible($this->secondDivisor)) {
