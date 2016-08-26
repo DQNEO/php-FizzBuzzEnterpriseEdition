@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
 
 class RangeIterator implements \Iterator
 {
@@ -13,7 +13,7 @@ class RangeIterator implements \Iterator
      * @param  Integer  $start
      * @param  Integer  $end
      */
-    public function __construct(IntegerEntity $start, IntegerEntity $end)
+    public function __construct(IntegerValue $start, IntegerValue $end)
     {
         $this->start = $start;
         $this->end = $end;
@@ -49,7 +49,7 @@ class RangeIterator implements \Iterator
      */
     public function current()
     {
-        return new IntegerEntity($this->current);
+        return new IntegerValue($this->current);
     }
 
     /**

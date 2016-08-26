@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\DataType;
 
-class IntegerEntity
+class IntegerValue
 {
     protected $value;
 
@@ -15,7 +15,7 @@ class IntegerEntity
         return $this->value;
     }
 
-    public function multiply(IntegerEntity $n)
+    public function multiply(IntegerValue $n)
     {
         return new self($this->value * $n->getValue());
     }

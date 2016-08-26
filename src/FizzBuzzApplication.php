@@ -6,7 +6,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntityEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerValue;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
@@ -27,7 +27,7 @@ class FizzBuzzApplication
      * @param WriterInterface $writer
      * @return void
      */
-    public function __construct(IntegerEntity $firstDivisor, IntegerEntity $secondDivisor, WriterInterface $writer)
+    public function __construct(IntegerValue $firstDivisor, IntegerValue $secondDivisor, WriterInterface $writer)
     {
         $this->firstDivisor = $firstDivisor;
         $this->secondDivisor = $secondDivisor;
