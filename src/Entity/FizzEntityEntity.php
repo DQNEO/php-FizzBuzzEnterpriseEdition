@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
-class Fizz extends StringEntity
+class FizzEntityEntity extends StringEntity
 {
     /** @var string */
     protected $value = "Fizz";

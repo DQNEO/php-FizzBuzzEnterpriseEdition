@@ -2,8 +2,8 @@
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\Fizz;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\Buzz;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntityEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\IntegerEntity;
@@ -55,9 +55,9 @@ class FizzBuzzApplication
         if ($divident->isDivisible($this->firstDivisor->multiply($this->secondDivisor))) {
             return FizzBuzz::getInstance();
         } elseif ($divident->isDivisible($this->firstDivisor)) {
-            return Fizz::getInstance();
+            return FizzEntityEntity::getInstance();
         } elseif ($divident->isDivisible($this->secondDivisor)) {
-            return Buzz::getInstance();
+            return BuzzEntity::getInstance();
         } else {
             return new NumberEntity($divident);
         }
