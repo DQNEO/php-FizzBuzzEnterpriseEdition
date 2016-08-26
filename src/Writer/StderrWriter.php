@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Writer;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\StringValue;
 
 class StderrWriter implements WriterInterface
 {
@@ -12,6 +12,6 @@ class StderrWriter implements WriterInterface
 
     public function writeln($string)
     {
-        fwrite(STDERR, $string . String::NEW_LINE);
+        fwrite(STDERR, $string . StringValue::NEW_LINE);
     }
 }

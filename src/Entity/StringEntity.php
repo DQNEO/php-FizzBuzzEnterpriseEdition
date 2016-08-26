@@ -1,7 +1,7 @@
 <?php
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
-use DQNEO\FizzBuzzEnterpriseEdition\DataType\String;
+use DQNEO\FizzBuzzEnterpriseEdition\DataType\StringValue;
 
 abstract class StringEntity extends AbstractEntity
 {
@@ -10,7 +10,7 @@ abstract class StringEntity extends AbstractEntity
 
     public function __construct()
     {
-        $this->object = new String($this->value);
+        $this->object = new StringValue($this->value);
     }
 
     /**
