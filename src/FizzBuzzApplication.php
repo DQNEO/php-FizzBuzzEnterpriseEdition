@@ -2,7 +2,7 @@
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntityEntity;
+use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzz;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
@@ -55,7 +55,7 @@ class FizzBuzzApplication
         if ($divident->isDivisible($this->firstDivisor->multiply($this->secondDivisor))) {
             return FizzBuzz::getInstance();
         } elseif ($divident->isDivisible($this->firstDivisor)) {
-            return FizzEntityEntity::getInstance();
+            return FizzEntity::getInstance();
         } elseif ($divident->isDivisible($this->secondDivisor)) {
             return BuzzEntity::getInstance();
         } else {
