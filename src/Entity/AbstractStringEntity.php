@@ -3,7 +3,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
 use DQNEO\FizzBuzzEnterpriseEdition\DataType\StringValue;
 
-abstract class StringEntity extends AbstractEntity
+abstract class AbstractStringEntity extends AbstractEntity
 {
     /** @var string */
     protected $value;
