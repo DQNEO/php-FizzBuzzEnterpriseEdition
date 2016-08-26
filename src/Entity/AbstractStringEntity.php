@@ -14,10 +14,7 @@ abstract class AbstractStringEntity extends AbstractEntity
         $this->object = new StringValue($this->value);
     }
 
-    /**
-     * @return StringEntity
-     */
-    public static function getInstance()
+    public static function getInstance(): AbstractStringEntity
     {
         static $obj = null;
         return $obj ?: $obj = new static;

@@ -17,7 +17,9 @@ class CLI
         }
 
         $writer = new StdoutWriter;
-        $fizzbuzz = new FizzBuzzApplication(new IntegerValue(3), new IntegerValue(5), $writer);
+        $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
+
+        $fizzbuzz = new FizzBuzzApplication($logic, $writer);
         $range = RangeIteratorFactory::factory(1, (int)$argv[1]);
         $fizzbuzz->run($range);
 
