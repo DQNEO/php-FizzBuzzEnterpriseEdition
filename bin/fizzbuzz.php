@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use DQNEO\FizzBuzzEnterpriseEdition\CLI;
+use DQNEO\FizzBuzzEnterpriseEdition\Console\Command;
 
-$status = CLI::main($argc, $argv);
+$status = Command::main($argc, $argv);
 exit($status);
