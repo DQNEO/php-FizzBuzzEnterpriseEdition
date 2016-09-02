@@ -4,7 +4,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\Console;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
-use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIteratorFactory;
+use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
@@ -21,8 +21,8 @@ class Command
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
 
         $fizzbuzz = new FizzBuzzApplication($logic, $writer);
-        $range = RangeIteratorFactory::factory(1, (int)$argv[1]);
-        $fizzbuzz->run($range);
+        $rangeIterator = new RangeIterator(new IntegerValue(1), new IntegerValue((int)$argv[1]));
+        $fizzbuzz->run($rangeIterator);
 
         return 0;
     }
