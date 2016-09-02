@@ -2,23 +2,20 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
-use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class MockWriter implements WriterInterface
 {
     public $buf = "";
 
-    public function write(AbstractEntity $string)
+    public function write(StringValue $string)
     {
         $this->buf .= $string;
     }
 
-    public function writeln(AbstractEntity $string)
+    public function writeln(StringValue $string)
     {
         $this->buf .= $string . "\n";
     }
