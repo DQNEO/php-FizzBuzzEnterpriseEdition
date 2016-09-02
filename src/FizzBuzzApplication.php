@@ -2,10 +2,8 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
 class FizzBuzzApplication
 {
@@ -31,7 +29,8 @@ class FizzBuzzApplication
     {
         foreach ($range as $n) {
             $entity = $this->logic->calculate(new Divident($n));
-            $this->writer->writeln($entity);
+
+            $this->writer->writeln($entity->getStringValue());
         }
     }
 }

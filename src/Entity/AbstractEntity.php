@@ -2,13 +2,16 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition\Entity;
 
+use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
+
 abstract class AbstractEntity
 {
     /** @var object */
     protected $object;
 
-    public function __toString(): string
+    public function getStringValue(): StringValue
     {
-        return (string) $this->object->getValue();
+        $string = (string) $this->object->getValue();
+        return new StringValue($string);
     }
 }
