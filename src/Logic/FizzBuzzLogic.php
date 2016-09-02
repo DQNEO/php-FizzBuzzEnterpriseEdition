@@ -11,7 +11,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 
-class FizzBuzzLogic
+class FizzBuzzLogic implements FizzBuzzLogicInterface
 {
     /** @var Integer */
     private $firstDivisor;
