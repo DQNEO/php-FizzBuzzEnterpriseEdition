@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
-use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
+use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;

@@ -1,8 +1,9 @@
 <?php
 declare(strict_types=1);
-namespace DQNEO\FizzBuzzEnterpriseEdition;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Application;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogicInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 

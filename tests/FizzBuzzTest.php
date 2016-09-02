@@ -2,6 +2,7 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
+use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
@@ -28,7 +29,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(1), new IntegerValue(1));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $this->assertInstanceOf("DQNEO\\FizzBuzzEnterpriseEdition\\FizzBuzzApplication", $fb);
+        $this->assertInstanceOf("DQNEO\\FizzBuzzEnterpriseEdition\\Application\\FizzBuzzApplication", $fb);
     }
 
     public function testRun1()

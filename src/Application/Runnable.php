@@ -6,8 +6,10 @@
  * Time: 23:03
  */
 
-namespace DQNEO\FizzBuzzEnterpriseEdition;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Application;
 
+
+use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
 
 interface Runnable
 {
