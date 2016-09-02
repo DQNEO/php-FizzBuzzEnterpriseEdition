@@ -6,7 +6,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogicInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 
-class FizzBuzzApplication
+class FizzBuzzApplication implements Runnable
 {
     /** @var WriterInterface */
     private $writer;
