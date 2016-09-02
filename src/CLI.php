@@ -3,6 +3,7 @@ declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\FizzBuzzApplication;
+use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
 use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;

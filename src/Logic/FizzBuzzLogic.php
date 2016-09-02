@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace DQNEO\FizzBuzzEnterpriseEdition;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Logic;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzEntity;
