@@ -8,7 +8,7 @@
         { "name": "DQNEO", "role" : "Administrator"}
   ],
   "require": {
-    "php" : ">=5.4.0",
+    "php" : ">=7.0.0",
     "phpunit/phpunit": "~4.5"
   },
   "autoload": {
