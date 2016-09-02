@@ -2,6 +2,7 @@
 declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
+use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
