@@ -5,7 +5,6 @@ namespace DQNEO\FizzBuzzEnterpriseEdition;
 use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\StdoutWriter;
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class CLI
