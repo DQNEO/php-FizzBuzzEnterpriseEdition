@@ -3,7 +3,7 @@ declare(strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition\Application;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogicInterface;
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
+use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 
@@ -25,7 +25,7 @@ class FizzBuzzApplication implements Runnable
     }
 
     /**
-     * @param RangeIterator $range
+     * @param \DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator $range
      */
     public function run(RangeIterator $range)
     {

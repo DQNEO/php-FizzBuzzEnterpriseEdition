@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace DQNEO\FizzBuzzEnterpriseEdition;
+namespace DQNEO\FizzBuzzEnterpriseEdition\Range;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 

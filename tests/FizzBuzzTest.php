@@ -4,6 +4,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
+use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIteratorFactory;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;

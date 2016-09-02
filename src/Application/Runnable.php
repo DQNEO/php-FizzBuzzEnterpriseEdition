@@ -9,7 +9,7 @@
 namespace DQNEO\FizzBuzzEnterpriseEdition\Application;
 
 
-use DQNEO\FizzBuzzEnterpriseEdition\RangeIterator;
+use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
 
 interface Runnable
 {
