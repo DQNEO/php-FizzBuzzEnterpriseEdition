@@ -9,6 +9,7 @@
   ],
   "require": {
     "php" : ">=7.0.0",
+    "friendsofphp/php-cs-fixer": "^1.11",
     "phpunit/phpunit": "~4.5"
   },
   "autoload": {
