@@ -10,10 +10,6 @@ class RangeIterator implements \Iterator
     private $end;
     private $current;
 
-    /**
-     * @param  Integer  $start
-     * @param  Integer  $end
-     */
     public function __construct(IntegerValue $start, IntegerValue $end)
     {
         $this->start = $start;
