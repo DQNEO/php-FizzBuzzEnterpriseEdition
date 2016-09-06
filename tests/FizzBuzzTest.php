@@ -9,20 +9,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
 use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
-class MockWriter implements WriterInterface
-{
-    public $buf = "";
-
-    public function write(StringValue $string)
-    {
-        $this->buf .= $string;
-    }
-
-    public function writeln(StringValue $string)
-    {
-        $this->buf .= $string . "\n";
-    }
-}
+require_once __DIR__ . '/MockWriter.php';
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     public function testNew()
