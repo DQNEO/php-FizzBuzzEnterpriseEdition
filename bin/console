@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use DQNEO\FizzBuzzEnterpriseEdition\Console\FizzBuzzCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$command = new FizzBuzzCommand();
+$application->add($command);
+$application->setDefaultCommand('fizzbuzz');
+$application->run();
