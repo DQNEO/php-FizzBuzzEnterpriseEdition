@@ -1,0 +1,8 @@
+filter:
+    excluded_paths:
+        - 'bin/*'
+        - 'test/*'
+checks:
+    php: true
+coding_style:
+    php: {  }
