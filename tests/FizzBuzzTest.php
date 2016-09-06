@@ -7,9 +7,14 @@ use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
 use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
-require_once __DIR__ . '/MockWriter.php';
 class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+        require_once __DIR__ . '/MockWriter.php';
+    }
+
     public function testNew()
     {
         $writer = new MockWriter;
