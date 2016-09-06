@@ -4,9 +4,7 @@ namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogic;
-use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIteratorFactory;
-use DQNEO\FizzBuzzEnterpriseEdition\Value\StringValue;
-use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
+use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 require_once __DIR__ . '/MockWriter.php';
@@ -25,7 +23,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(RangeIteratorFactory::factory(1, 1));
+        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(1)));
         $this->assertEquals("1\n", $writer->buf);
     }
 
@@ -34,7 +32,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(RangeIteratorFactory::factory(1, 2));
+        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(2)));
         $this->assertEquals("1\n2\n", $writer->buf);
     }
 
@@ -43,7 +41,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(RangeIteratorFactory::factory(1, 3));
+        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(3)));
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
@@ -53,7 +51,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(RangeIteratorFactory::factory(1, 16));
+        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(16)));
 
         $expected ="1
 2
