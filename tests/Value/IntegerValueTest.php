@@ -21,8 +21,6 @@ class IntegerValueTest extends \PHPUnit_Framework_TestCase
     public function testMultiply()
     {
         $obj1 = new IntegerValue(3);
-        $this->assertEquals(3, $obj1->getValue());
-
         $obj2 = $obj1->multiply(new IntegerValue(4));
         $this->assertEquals(12, $obj2->getValue());
     }
