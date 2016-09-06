@@ -27,7 +27,7 @@ class FizzBuzzCommand extends Command
         $writer = new StdoutWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
 
-        $fizzbuzz = new FizzBuzzApplication($logic, $writer);
+        $fizzbuzz = new FizzBuzzApplication($logic, $output);
         $rangeIterator = new RangeIterator(new IntegerValue(1), new IntegerValue((int)$to));
         $fizzbuzz->run($rangeIterator);
 

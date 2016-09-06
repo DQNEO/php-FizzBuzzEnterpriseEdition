@@ -4,12 +4,12 @@ namespace DQNEO\FizzBuzzEnterpriseEdition\Application;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Logic\FizzBuzzLogicInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Range\RangeIterator;
-use DQNEO\FizzBuzzEnterpriseEdition\Writer\WriterInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class FizzBuzzApplication implements Runnable
 {
-    /** @var WriterInterface */
+    /** @var OutputInterface */
     private $writer;
     /**
      * @var FizzBuzzLogicInterface
@@ -18,7 +18,7 @@ class FizzBuzzApplication implements Runnable
 
     /**
      */
-    public function __construct(FizzBuzzLogicInterface $logic, WriterInterface $writer)
+    public function __construct(FizzBuzzLogicInterface $logic, OutputInterface $writer)
     {
         $this->writer = $writer;
         $this->logic = $logic;
