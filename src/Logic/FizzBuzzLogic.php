@@ -13,10 +13,10 @@ use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class FizzBuzzLogic implements FizzBuzzLogicInterface
 {
-    /** @var Integer */
+    /** @var IntegerValue */
     private $firstDivisor;
 
-    /** @var Integer */
+    /** @var IntegerValue */
     private $secondDivisor;
 
     public function __construct(IntegerValue $firstDivisor, IntegerValue $secondDivisor)
