@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare (strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Application\FizzBuzzApplication;
@@ -28,7 +28,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(1)));
+        $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(1)));
         $this->assertEquals("1\n", $writer->buf);
     }
 
@@ -37,7 +37,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(2)));
+        $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(2)));
         $this->assertEquals("1\n2\n", $writer->buf);
     }
 
@@ -46,7 +46,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(3)));
+        $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(3)));
         $this->assertEquals("1\n2\nFizz\n", $writer->buf);
     }
 
@@ -56,7 +56,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $writer = new MockWriter;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
         $fb = new FizzBuzzApplication($logic, $writer);
-        $fb->run(new RangeIterator(new IntegerValue(1),new IntegerValue(16)));
+        $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(16)));
 
         $expected ="1
 2

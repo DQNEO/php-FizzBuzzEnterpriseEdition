@@ -8,7 +8,6 @@
 
 namespace DQNEO\FizzBuzzEnterpriseEdition\Value;
 
-
 class StringValueTest extends \PHPUnit_Framework_TestCase
 {
     public function testStringValue()
@@ -19,5 +18,4 @@ class StringValueTest extends \PHPUnit_Framework_TestCase
         $obj2 = new StringValue(' world');
         $this->assertEquals(' world', $obj2->getValue());
     }
-
 }

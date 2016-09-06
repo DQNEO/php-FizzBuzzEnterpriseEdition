@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare (strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition\Logic;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
@@ -9,7 +9,6 @@ use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
-
 
 class FizzBuzzLogic implements FizzBuzzLogicInterface
 {
