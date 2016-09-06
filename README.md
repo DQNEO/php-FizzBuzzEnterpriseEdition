@@ -1,6 +1,8 @@
 # php FizzBuzz Enterprise Edition
 
 [![Build Status](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition.svg?branch=develop)](https://travis-ci.org/DQNEO/php-FizzBuzzEnterpriseEdition)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DQNEO/php-FizzBuzzEnterpriseEdition/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DQNEO/php-FizzBuzzEnterpriseEdition/?branch=master)
+
 
 FizzBuzz with too much object oriented programming.
 
