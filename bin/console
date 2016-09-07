@@ -8,5 +8,4 @@ use Symfony\Component\Console\Application;
 $application = new Application();
 $command = new FizzBuzzCommand();
 $application->add($command);
-$application->setDefaultCommand('fizzbuzz');
 $application->run();
