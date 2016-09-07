@@ -1,6 +1,6 @@
 #!/bin/bash
 cd $(dirname $0)/../..
-diff <(./bin/fizzbuzz.php 30) ./tests/functional/result30.txt
+diff <(./bin/console fizzbuzz 30) ./tests/functional/result30.txt
 if [[ $? -eq 0 ]]; then
     echo ok
 else
@@ -8,7 +8,7 @@ else
     exit 1
 fi
 
-diff <(./bin/fizzbuzz.php 100) ./tests/functional/result100.txt
+diff <(./bin/console fizzbuzz 100) ./tests/functional/result100.txt
 if [[ $? -eq 0 ]]; then
     echo ok
 else
