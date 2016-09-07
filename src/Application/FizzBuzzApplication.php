@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class FizzBuzzApplication implements Runnable
 {
     /** @var OutputInterface */
-    private $writer;
+    private $output;
     /**
      * @var FizzBuzzLogicInterface
      */
@@ -18,9 +18,9 @@ class FizzBuzzApplication implements Runnable
 
     /**
      */
-    public function __construct(FizzBuzzLogicInterface $logic, OutputInterface $writer)
+    public function __construct(FizzBuzzLogicInterface $logic, OutputInterface $output)
     {
-        $this->writer = $writer;
+        $this->output = $output;
         $this->logic = $logic;
     }
 
@@ -32,7 +32,7 @@ class FizzBuzzApplication implements Runnable
         foreach ($range as $n) {
             $entity = $this->logic->calculate(new Divident($n));
 
-            $this->writer->writeln($entity->getStringValue());
+            $this->output->writeln($entity->getStringValue());
         }
     }
 }

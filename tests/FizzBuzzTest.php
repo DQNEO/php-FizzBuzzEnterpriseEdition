@@ -17,45 +17,45 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 
     public function testNew()
     {
-        $writer = new BufferedOutput;
+        $output = new BufferedOutput;
         $logic = new FizzBuzzLogic(new IntegerValue(1), new IntegerValue(1));
-        $fb = new FizzBuzzApplication($logic, $writer);
+        $fb = new FizzBuzzApplication($logic, $output);
         $this->assertInstanceOf("DQNEO\\FizzBuzzEnterpriseEdition\\Application\\FizzBuzzApplication", $fb);
     }
 
     public function testRun1()
     {
-        $writer = new BufferedOutput;
+        $output = new BufferedOutput;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
-        $fb = new FizzBuzzApplication($logic, $writer);
+        $fb = new FizzBuzzApplication($logic, $output);
         $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(1)));
-        $this->assertEquals("1\n", $writer->fetch());
+        $this->assertEquals("1\n", $output->fetch());
     }
 
     public function testRun2()
     {
-        $writer = new BufferedOutput;
+        $output = new BufferedOutput;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
-        $fb = new FizzBuzzApplication($logic, $writer);
+        $fb = new FizzBuzzApplication($logic, $output);
         $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(2)));
-        $this->assertEquals("1\n2\n", $writer->fetch());
+        $this->assertEquals("1\n2\n", $output->fetch());
     }
 
     public function testRun3()
     {
-        $writer = new BufferedOutput;
+        $output = new BufferedOutput;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
-        $fb = new FizzBuzzApplication($logic, $writer);
+        $fb = new FizzBuzzApplication($logic, $output);
         $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(3)));
-        $this->assertEquals("1\n2\nFizz\n", $writer->fetch());
+        $this->assertEquals("1\n2\nFizz\n", $output->fetch());
     }
 
 
     public function testRun16()
     {
-        $writer = new BufferedOutput;
+        $output = new BufferedOutput;
         $logic = new FizzBuzzLogic(new IntegerValue(3), new IntegerValue(5));
-        $fb = new FizzBuzzApplication($logic, $writer);
+        $fb = new FizzBuzzApplication($logic, $output);
         $fb->run(new RangeIterator(new IntegerValue(1), new IntegerValue(16)));
 
         $expected ="1
@@ -75,6 +75,6 @@ Fizz
 FizzBuzz
 16
 ";
-        $this->assertEquals($expected, $writer->fetch());
+        $this->assertEquals($expected, $output->fetch());
     }
 }
