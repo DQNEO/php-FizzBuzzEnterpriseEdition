@@ -29,8 +29,8 @@ class FizzBuzzApplication implements Runnable
      */
     public function run(RangeIterator $range)
     {
-        foreach ($range as $n) {
-            $entity = $this->logic->calculate(new Divident($n));
+        foreach ($range as $number) {
+            $entity = $this->logic->calculate(new Divident($number));
 
             $this->output->writeln($entity->getStringValue());
         }
