@@ -2,7 +2,7 @@
 declare (strict_types=1);
 namespace DQNEO\FizzBuzzEnterpriseEdition\Value;
 
-class Divident extends IntegerValue
+class Divident extends IntegerValue implements DividentInterface
 {
     public function __construct(IntegerValue $divisor)
     {

@@ -8,6 +8,7 @@ use DQNEO\FizzBuzzEnterpriseEdition\Entity\BuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\FizzBuzzEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\NumberEntity;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\DividentInterface;
 use DQNEO\FizzBuzzEnterpriseEdition\Value\IntegerValue;
 
 class FizzBuzzLogic implements FizzBuzzLogicInterface
@@ -26,10 +27,10 @@ class FizzBuzzLogic implements FizzBuzzLogicInterface
 
 
     /**
-     * @param  Divident $divident
+     * @param  DividentInterface $divident
      * @return AbstractEntity
      */
-    public function calculate(Divident $divident): AbstractEntity
+    public function calculate(DividentInterface $divident): AbstractEntity
     {
         if ($divident->isDivisible($this->firstDivisor->multiply($this->secondDivisor))) {
             return FizzBuzzEntity::getInstance();

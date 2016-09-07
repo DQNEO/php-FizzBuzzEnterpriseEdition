@@ -9,9 +9,9 @@
 namespace DQNEO\FizzBuzzEnterpriseEdition\Logic;
 
 use DQNEO\FizzBuzzEnterpriseEdition\Entity\AbstractEntity;
-use DQNEO\FizzBuzzEnterpriseEdition\Value\Divident;
+use DQNEO\FizzBuzzEnterpriseEdition\Value\DividentInterface;
 
 interface FizzBuzzLogicInterface
 {
-    public function calculate(Divident $divident): AbstractEntity;
+    public function calculate(DividentInterface $divident): AbstractEntity;
 }
